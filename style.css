@@ -1,0 +1,55 @@
+body {
+    height: 90vh;
+      padding: 0 !important;
+      margin: 0 auto !important;
+  }
+  
+  .fixed {
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+  }
+  
+  .draggable, .ui-draggable{
+      cursor: pointer!important;
+  }
+  
+  .ui-dialog{
+      width: 40%!important;
+  }
+  
+  .ui-dialog-titlebar{
+      background:#161616;
+      color:#ffffff;
+      font-size: 1.2em;
+      padding-left: 5px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+  
+  }
+  
+  .ui-dialog-titlebar-close::before{
+      content: '\00D7';
+  }
+  
+  .ui-dialog-titlebar-close{
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    outline: none;
+    float: right;
+    margin-right: 5px;
+  
+  }
+  
+  .ui-dialog-titlebar-close:hover{
+  color: #ff0000;
+  }
+  
+  .ui-dialog-content{
+    cursor: default;
+    border:2px solid #161616;
+    background: #343A40;
+  }
