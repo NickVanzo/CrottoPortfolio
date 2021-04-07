@@ -17,9 +17,7 @@ $(window).on("load", function () {
             dialogs.push(this.id);
             $("#" + this.id).hide();
         }
-
     });
-
 });
 
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)

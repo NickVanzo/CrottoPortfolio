@@ -1,7 +1,9 @@
-body {
-    height: 90vh;
+  body {
+      height: 90vh;
       padding: 0 !important;
       margin: 0 auto !important;
+      background-color: #161616 !important;
+      font-family: 'Raleway';
   }
   
   .fixed {
@@ -53,3 +55,55 @@ body {
     border:2px solid #161616;
     background: #343A40;
   }
+
+  .textA {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.78px;
+    color: #ffffff;
+  }
+
+  .textB {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 11.74px;
+    color: #ffffff;
+  }
+
+  .textC {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15.26px;
+    color: #ffffff;
+  }
+
+  #elementContactMe {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+  }
+
+  #elementAboutMe {
+    position: absolute;
+    left: 250px;
+    top: 400px;
+  }
+
+  #elementWorks {
+    position: absolute;
+    left: 1000px;
+    top: 200px;
+  }
+
+  #elementRandomStuff {
+    position: absolute;
+    left: 800px;
+    top: 500px;
+  }
+
+
+
+
+
+
+

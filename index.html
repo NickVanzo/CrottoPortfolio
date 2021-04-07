@@ -6,6 +6,7 @@
 
     <title>Portfolio</title>
 
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
@@ -13,67 +14,39 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8d28aef0fa.js" crossorigin="anonymous"></script>
-    <!-- CircleType JS (parole curve) -->
-    <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
-    
 </head>
 
-<body class="bg-dark">
+<body>
 
     <!-- Main Container -->
     <div class="container-fluid position-relative">
 
-        <!-- First Row -->
-        <div class="row mt-5 text-center">
-
             <!-- Start Column -->
-            <div class="col-md-2 text-center m-3 btn draggable">
-                <i id="my_project" class="folder fa fa-folder fa-7x text-primary" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="my_project">My Project</label>
+            <div id="elementWorks" class="  text-center m-3 btn draggable">
+                <i id="works" class="folder fa fa-folder fa-7x text-primary" aria-hidden="true"></i>
+                <label class="d-block textB" for="works">Works</label>
             </div>
 
-            <div class="col-md-2 text-center m-3 btn draggable">
-                <i id="pippo_project" class="folder fa fa-folder fa-7x text-success" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="pippo_project">Pippo Project</label>
-            </div>
-
-            <div class="col-md-2 text-center m-3 draggable">
+            <div id="elementAboutMe" class="  text-center m-3 draggable">
                 <i id="about_me" class="fa fa-file fa-7x text-primary" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="about_me">About Me</label>
+                <label class="d-block textB" for="about_me">About Me</label>
             </div>
 
-            <div class="col-md-2 text-center m-3 btn draggable">
-                <i id="other_project" class="folder fa fa-folder fa-7x text-danger" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="other_project">Other Project</label>
-            </div>
-
-            <div class="col-md-2 text-center m-3 draggable">
+            <div id="elementContactMe" class="  text-center m-3 draggable">
                 <i id="contact_me" class="fa fa-file fa-7x text-white" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="contact_me">Contact Me</label>
+                <label class="d-block textB" for="contact_me">Contact Me</label>
             </div>
 
-            <div class="col-md-2 text-center m-3 draggable">
-                <i id="profile_picture" class="fa fa-file fa-7x text-info" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="profile_picture">Profile Picture</label>
-            </div>
-
-            <div class="col-md-2 text-center m-3 btn draggable">
-                <i id="folder_1" class="folder fa fa-folder fa-7x text-warning" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="folder_1">Folder 1</label>
-            </div>
-
-            <div class="col-md-2 text-center m-3 draggable">
-                <i id="file_1" class="fa fa-file fa-7x text-secondary" aria-hidden="true"></i>
-                <label class="text-white font-weight-bold d-block" for="file_1">File 1</label>
+            <div id="elementRandomStuff" class="  text-center m-3 draggable">
+                <i id="randomStuff" class="fa fa-file fa-7x text-secondary" aria-hidden="true"></i>
+                <label class="d-block textB" for="randomStuff">Random stuff</label>
             </div>
 
             <!-- End Column-->
-
             <!-- Dialog Boxes -->
-
             <div class="dialog position-relative" id="dialog_my_project">
                 <div class="row-sm text-center">
-                    <div class="col-md-2 text-center m-3 btn">
+                    <div class="  text-center m-3 btn">
                         <i id="folder_inside" class="folder fa fa-folder fa-3x text-success" aria-hidden="true"></i>
                         <label class="text-white font-weight-bold d-block" for="folder_inside">Folder Inside</label>
                     </div>
@@ -86,12 +59,12 @@
 
             <div class="dialog" id="dialog_folder_inside">
                 <div class="row-sm text-center">
-                    <div class="col-md-2 text-center m-3 btn">
+                    <div class="  text-center m-3 btn">
                         <i id="inside_1" class="fa fa-file fa-3x text-white" aria-hidden="true"></i>
                         <label class="text-white font-weight-bold d-block" for="inside_1">Inside 1</label>
                     </div>
 
-                    <div class="col-md-2 text-center m-3 btn">
+                    <div class=" text-center m-3 btn">
                         <i id="inside_2" class="fa fa-file fa-3x text-danger" aria-hidden="true"></i>
                         <label class="text-white font-weight-bold d-block" for="inside_2">Inside 2</label>
                     </div>
@@ -100,8 +73,6 @@
 
             <!-- End Dialog Boxes-->
 
-        </div>
-        <!-- End First Row -->
 
     </div>
     <!-- End Main Container -->
