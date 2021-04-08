@@ -78,27 +78,27 @@
   }
 
   #elementContactMe {
-    position: absolute;
-    left: 40px;
-    top: 40px;
+    position: fixed;
+    top: 5%;
+    left: 10%;
   }
 
   #elementAboutMe {
-    position: absolute;
-    left: 200px;
-    top: 400px;
+    position: fixed;
+    left: 20%;
+    top: 60%;
   }
 
   #elementWorks {
-    position: absolute;
-    left: 1000px;
-    top: 200px;
+    position: fixed;
+    left: 70%;
+    top: 30%;
   }
 
   #elementRandomStuff {
-    position: absolute;
-    left: 800px;
-    top: 500px;
+    position: fixed;
+    left: 60%;
+    top: 70%;
   }
 
 
