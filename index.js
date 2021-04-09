@@ -20,31 +20,48 @@ $(window).on("load", function () {
     });
 });
 
+function openDialog(dialogName, title, idDialog, position) {
+    console.log(dialogName + " " + title + " " + idDialog);
+    $(dialogName).dialog({
+        title: title,
+        position: {
+            my: position,
+            at: "center",
+            of: $("#" + idDialog),
+            collision: "fit fit"
+        }
+    });
+}
+
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)
 $(function () {
     $(".folder").dblclick(function () {
 
-        //cerco il dialog rispettivo dell'id che chiama la funzione (cartella su cui faccio doppio click) es. id:"my_project" ==> dialog:"dialog_my_project"
-        dialog = dialogs.filter((id) => id.includes(this.id));
+        // //cerco il dialog rispettivo dell'id che chiama la funzione (cartella su cui faccio doppio click) es. id:"my_project" ==> dialog:"dialog_my_project"
+        // dialog = dialogs.filter((id) => id.includes(this.id));
 
-        //costruisco l'id es. "#my_project"
-        id_dialog = "#" + dialog;
+        // //costruisco l'id es. "#my_project"
+        // id_dialog = "#" + dialog;
 
-        //costruisco il titolo es. "My project"
-        let title = createTitleDialog(this.id);
-
-        //mostro il dialog che ha come id: id_dialog tramite .dialog()
-        // ==> impostando tutto ciò che mi serve (title, position, ...)
-        $(id_dialog).dialog({
-            title: title,
-            position: {
-                my: "left center",
-                at: "center",
-                of: $("#" + this.id),
-                collision: "fit fit"
-            }
-            
-        });
+        // //costruisco il titolo es. "My project"
+        // let title = createTitleDialog(this.id);
+        switch(this.id) {
+            case "randomStuff":
+                openDialog("#dialogRandomStuff", "randomStuff", this.id, "left center");
+            break;
+            case "contact_me":
+                openDialog("#dialogContactMe", "contact_me", this.id, "left center");
+                break;
+            case "about_me":
+                openDialog("#dialogAboutMe", "About me", this.id, "left center");
+                openDialog("#dialogAboutMePhoto", "Me", this.id, "top", );
+                $("#myDialogText").text('Ciao! Mi chiamo Fracesco Crotto, sono un grafic designer e vivo a torino, in Italia.\n\nMi piace il design, la musica, i colori e dare un immagine alle cose e costruire nuovi universi di senso, oltre alla birra naturalmente.');
+                break;
+            case "works":
+                openDialog("#dialogWorks", "works", this.id, "left center");
+                break;
+            default:
+        }
 
         //porta davanti la finestra cliccata
         bringToFront();

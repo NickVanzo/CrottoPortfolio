@@ -23,29 +23,29 @@
 
             <!-- Start Column -->
                 <div id="elementWorks" class="text-center m-3 btn draggable">
-                    <i id="works" class="folder fa fa-folder fa-7x text-primary" aria-hidden="true"></i>
+                        <img class="folder" id="works" src="./assets/_SVG_UI/ICO_FOLDER.svg" width="60" height="60">
                     <label class="d-block textA" for="works">Works</label>
                 </div>
             
-                <div id="elementAboutMe" class="text-center m-3 draggable">
-                    <i id="about_me" class="fa fa-file fa-7x text-primary" aria-hidden="true"></i>
+                <div id="elementAboutMe" class="text-center m-3 btn draggable">
+                        <img class="folder" id="about_me" src="./assets/_SVG_UI/ICO_TXT.svg" width="60" height="60">
                     <label class="d-block textA" for="about_me">About Me</label>
                 </div>
             
-                <div id="elementContactMe" class="text-center m-3 draggable">
-                    <i id="contact_me" class="fa fa-file fa-7x text-white" aria-hidden="true"></i>
+                <div id="elementContactMe" class="text-center m-3 btn draggable">
+                        <img class="folder" id="contact_me" src="./assets/_SVG_UI/ICO_TXT.svg" width="60" height="60">
                     <label class="d-block textA" for="contact_me">Contact Me</label>
                 </div>
             
-                <div id="elementRandomStuff" class="text-center m-3 draggable">
-                    <i id="randomStuff" class="fa fa-file fa-7x text-secondary" aria-hidden="true"></i>
+                <div id="elementRandomStuff" class="text-center m-3 btn draggable">
+                        <img class="folder" id="randomStuff" src="./assets/_SVG_UI/ICO_EXE.svg" width="60" height="60">
                     <label class="d-block textA" for="randomStuff">Random stuff</label>
                 </div>
             
 
             <!-- End Column-->
             <!-- Dialog Boxes -->
-            <div class="dialog position-relative" id="dialog_my_project">
+            <div class="dialog position-relative" id="">
                 <div class="row-sm text-center">
                     <div class="  text-center m-3 btn">
                         <i id="folder_inside" class="folder fa fa-folder fa-3x text-success" aria-hidden="true"></i>
@@ -54,11 +54,21 @@
                 </div>
             </div>
 
-            <div class="dialog text-center text-white" id="dialog_pippo_project">
-                <h1>DAJE PIPPO</h1>
+            <div class="dialog position-relative" id="dialogAboutMe" style="height: 200px;">
+                    <div id="myDialogText" class="textB  m-3">
+                    </div>
             </div>
 
-            <div class="dialog" id="dialog_folder_inside">
+            <div class="dialog position-relative" id="dialogAboutMePhoto">
+                <img src="./assets/About me.jpg" alt="about_me.jpg" height="200px" width="200px">
+            </div>        
+        </div>
+
+
+
+            
+
+            <!-- <div class="dialog" id="dialog_folder_inside">
                 <div class="row-sm text-center">
                     <div class="  text-center m-3 btn">
                         <i id="inside_1" class="fa fa-file fa-3x text-white" aria-hidden="true"></i>
@@ -70,7 +80,7 @@
                         <label class="text-white font-weight-bold d-block" for="inside_2">Inside 2</label>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- End Dialog Boxes-->
 
