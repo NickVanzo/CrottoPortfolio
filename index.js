@@ -9,7 +9,7 @@ $(".draggable").draggable();
 $(window).on("load", function () {
 
     //$("*") ==> prende tutti gli elementi all'interno della pagina e gli applica un foreach loop
-    $("*").each(function () {
+    /*$("*").each(function () {
 
         //se l'elemento in questione ha un id (this.id) e la class dell'oggetto include "dialog"
         // ==> inserisco l'id all'interno dell'array dialogs e nascondo il rispettivo dialog nell'html tramite .hide()
@@ -17,12 +17,30 @@ $(window).on("load", function () {
             dialogs.push(this.id);
             $("#" + this.id).hide();
         }
-    });
+    });*/
+
 });
 
+const dialogStyle = {
+    "width" : "25%",
+    "min-height" : "100px",
+    "border" : "2px solid red",
+    "position" : "absolute",
+    "margin" : "10% 0 0 10%"
+}
+
 function openDialog(dialogName, title, idDialog, position) {
-    console.log(dialogName + " " + title + " " + idDialog);
-    $(dialogName).dialog({
+
+    $(dialogName).show();
+    $(dialogName).css(dialogStyle);
+    $(dialogName).addClass(".draggable");
+    
+    //prende tutti gli elementi con class "draggable" e li rende draggable()
+    $(".draggable").draggable();
+
+    console.log($(dialogName));
+
+    /*$(dialogName).dialog({
         title: title,
         position: {
             my: position,
@@ -30,7 +48,7 @@ function openDialog(dialogName, title, idDialog, position) {
             of: $("#" + idDialog),
             collision: "fit fit"
         }
-    });
+    });*/
 }
 
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)
@@ -70,12 +88,12 @@ $(function () {
 });
 
 //creo il titolo del dialog tramite il suo id  es. "my_project"
-const createTitleDialog = (id_dialog) => {
+/*const createTitleDialog = (id_dialog) => {
     //id_dialog = id_dialog.substring(8);
     id_dialog = id_dialog.replace("_", " ");  //replace di '_' con ' '  es. "my project"
     id_dialog = id_dialog.substring(0, 1).toUpperCase() + id_dialog.substring(1);  //UpperCase del primo carattere  es. "My project"
     return id_dialog;
-}
+}*/
 
 //imposto lo z-index a 9999 ==> la finestra cliccata deve essere davanti a tutto
 function bringToFront() {
