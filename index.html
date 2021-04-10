@@ -12,7 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
+
 </head>
 
 <body>
@@ -20,36 +20,82 @@
     <!-- Main Container -->
     <div class="container-fluid position-relative" style="position: relative">
 
-            <!-- Start Column -->
-                <div id="elementWorks" class="text-center draggable">
-                        <img class="folder" id="works" src="./assets/_SVG UI/ICO_FOLDER.svg" width="60" height="60">
-                    <label class="d-block textA" for="works">Works</label>
+        <!-- Start Column -->
+        <div id="elementWorks" class="text-center draggable">
+            <img class="folder" id="works" src="./assets/_SVG UI/ICO_FOLDER.svg" width="60" height="60">
+            <label class="d-block textA" for="works">Works</label>
+        </div>
+
+        <div id="elementAboutMe" class="text-center draggable">
+            <img class="folder" id="about_me" src="./assets/_SVG UI/ICO_TXT.svg" width="60" height="60">
+            <label class="d-block textA" for="about_me">About Me</label>
+        </div>
+
+        <div id="elementContactMe" class="text-center draggable">
+            <img class="folder" id="contact_me" src="./assets/_SVG UI/ICO_TXT.svg" width="60" height="60">
+            <label class="d-block textA" for="contact_me">Contact Me</label>
+        </div>
+
+        <div id="elementRandomStuff" class="text-center draggable">
+            <img class="folder" id="randomStuff" src="./assets/_SVG UI/ICO_EXE.svg" width="60" height="60">
+            <label class="d-block textA" for="randomStuff">Random stuff</label>
+        </div>
+
+
+
+
+        <div id="dialogWorks" class="dialog">
+            <div class="dialogHeader">
+                <p class="textA"> Works </p><button>Close</button>
+            </div>
+            <div class="dialogContent" style="display: flex; flex-wrap: wrap;">
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 1</label>
                 </div>
-            
-                <div id="elementAboutMe" class="text-center draggable">
-                        <img class="folder" id="about_me" src="./assets/_SVG UI/ICO_TXT.svg" width="60" height="60">
-                    <label class="d-block textA" for="about_me">About Me</label>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 2</label>
                 </div>
-            
-                <div id="elementContactMe" class="text-center draggable">
-                        <img class="folder" id="contact_me" src="./assets/_SVG UI/ICO_TXT.svg" width="60" height="60">
-                    <label class="d-block textA" for="contact_me">Contact Me</label>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 3</label>
                 </div>
-            
-                <div id="elementRandomStuff" class="text-center draggable">
-                        <img class="folder" id="randomStuff" src="./assets/_SVG UI/ICO_EXE.svg" width="60" height="60">
-                    <label class="d-block textA" for="randomStuff">Random stuff</label>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 4</label>
                 </div>
-            
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 5</label>
+                </div>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 6</label>
+                </div>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 7</label>
+                </div>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 8</label>
+                </div>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 9</label>
+                </div>
+                <div class="m-2">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                    <label class="d-block textA">Cartella 10</label>
+                </div>
+            </div>
+        </div>
 
-                 
-        
 
 
 
-            
-
-            <!-- <div class="dialog" id="dialog_folder_inside">
+        <!-- <div class="dialog" id="dialog_folder_inside">
                 <div class="row-sm text-center">
                     <div class="  text-center m-3 btn">
                         <i id="inside_1" class="fa fa-file fa-3x text-white" aria-hidden="true"></i>
@@ -63,7 +109,7 @@
                 </div>
             </div> -->
 
-            <!-- End Dialog Boxes-->
+        <!-- End Dialog Boxes-->
 
 
     </div>
