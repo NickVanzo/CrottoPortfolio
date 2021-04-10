@@ -99,3 +99,8 @@ $(function () {
 function bringToFront() {
     $(".ui-dialog").css("zIndex", 9999);
 }
+
+// chiudi tutto 
+$(function(){$("#chiudiTutto").on("click",function(){
+    $(".dialog").hide();
+});});
