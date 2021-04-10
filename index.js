@@ -21,9 +21,8 @@ $(window).on("load", function () {
 
 });
 
-const dialogStyle = {
+var dialogStyle = {
     "width" : "25%",
-    "min-height" : "100px",
     "border" : "2px solid red",
     "position" : "absolute",
     "margin" : "10% 0 0 10%"
@@ -54,7 +53,7 @@ function openDialog(dialogName, title, idDialog, position) {
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)
 $(function () {
     $(".folder").dblclick(function () {
-
+        dialogStyle.width = "25%";
         // //cerco il dialog rispettivo dell'id che chiama la funzione (cartella su cui faccio doppio click) es. id:"my_project" ==> dialog:"dialog_my_project"
         // dialog = dialogs.filter((id) => id.includes(this.id));
 
@@ -71,9 +70,10 @@ $(function () {
                 openDialog("#dialogContactMe", "contact_me", this.id, "left center");
                 break;
             case "about_me":
+                dialogStyle.width = "50%";
                 openDialog("#dialogAboutMe", "About me", this.id, "left center");
-                openDialog("#dialogAboutMePhoto", "Me", this.id, "top", );
-                $("#myDialogText").text('Ciao! Mi chiamo Fracesco Crotto, sono un grafic designer e vivo a torino, in Italia.\n\nMi piace il design, la musica, i colori e dare un immagine alle cose e costruire nuovi universi di senso, oltre alla birra naturalmente.');
+                dialogStyle.width = "203px";
+                openDialog("#dialogAboutMePhoto", "Me", this.id, "top");
                 break;
             case "works":
                 openDialog("#dialogWorks", "works", this.id, "left center");

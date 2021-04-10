@@ -79,6 +79,7 @@
 
   .dialog {
     display: none;
+    background-color: #161616;
   }
 
   #elementContactMe {
@@ -105,9 +106,6 @@
     top: 70%;
   }
 
-  #dialogAboutMePhoto {
-    width: 200px;
-  }
 
 
 
