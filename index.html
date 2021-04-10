@@ -18,8 +18,12 @@
 <body>
 
     <!-- Main Container -->
-    <div class="container-fluid position-relative" style="position: relative">
-        <p id ='chiudiTutto' class = "textA">chiudi tutto</p>
+    <div class="container-fluid position-relative">
+
+        <div id="chiudiTutto" class="grad01 textA d-flex align-items-center justify-content-center">
+            <span>Chiudi tutto &times;</span> 
+        </div>
+        
 
         <!-- Start Column -->
         <div id="elementWorks" class="text-center draggable">
@@ -42,90 +46,112 @@
             <label class="d-block textA" for="randomStuff">Random stuff</label>
         </div>
 
+        <!-- DIALOG WORKS FOLDER -->
 
-        <div id="dialogWorks" class="dialog draggable">
-            <div class="dialogHeader">
-                <p class="textA"> Works </p><button>Close</button>
+        <div id="dialogWorks" class="dialog draggable grad01">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA"> Works </p>
+                <img src="assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
             </div>
-            <div class="dialogContent" style="display: flex; flex-wrap: wrap;">
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+            <div class="dialogContent d-flex flex-wrap justify-content-start text-center ml-1 mr-1 mb-1 dark">
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 1</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 2</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 3</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 4</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 5</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 6</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 7</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 8</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 9</label>
                 </div>
-                <div class="m-2">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                <div class="m-3">
+                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 10</label>
                 </div>
             </div>
         </div>
-         <!--dialogAboutMe-->
-            
-        <div id="dialogAboutMe" class="draggable dialog">
-            <div title="About me">
-                <div class="dialogHeader d-flex justify-content-between">
-                    <p class="textA">About me </p><img style="float: right; width: 30px; height: 30px; background-color: blue;" src="./assets/_SVG UI/WIN_CLOSE.svg">
-                </div>
-                </div>
-                    <p class="textB" style="padding: 30px;">
-                        Ciao<br/><br/>Mi chiamo Francesco Crotto, sono un Graphic designer e vivo a Torino, in Italia.<br/><br/>
-                        Mi piace il design, la musica, i colori, dare un'immagine alle cose e costruire nuovi universi di senso, oltre alla
-                        birra naturalmente.
+
+        <!-- END DIALOG WORKS FOLDER -->
+
+        <!-- DIALOG ABOUT ME -->
+
+        <div id="dialogAboutMe" class="draggable dialog grad01">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">About me </p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                <p class="textB" style="padding: 30px;">
+                    Ciao<br /><br />Mi chiamo <span class="textGrad01">Francesco Crotto</span>, sono un Graphic designer
+                    e vivo a Torino, in
+                    Italia.<br /><br />
+                    Mi piace il design, la musica, i colori, dare un'immagine alle cose e costruire nuovi universi di
+                    senso, oltre alla
+                    birra naturalmente.
                 </p>
             </div>
         </div>
-        <!--dialogAboutMePhoto-->
-        <div id="dialogAboutMePhoto" class="draggable dialog">
-            <img src="./assets/About me.jpg" style="width: 200px; height: 200px;">
-        </div>
 
+        <!-- END DIALOG ABOUT ME -->
 
-        <!--dialogContactMe-->
+        <!-- DIALOG ABOUT ME PHOTO-->
 
-        <div id="dialogContactMe" class="draggable dialog">
-            <div class="dialogHeader d-flex justify-content-between textA">Contact Me</div>
-            <div class="dialogContent textB" ><p>Se mi cerchi mi trovi qui : </p><br>
-                     <a href= "" target= "_blank">Facebook </a>
-                <br> <a href= "" target= "_blank">Twitter  </a>
-                <br> <a href= "" target= "_blank">Instagram</a>
+        <div id="dialogAboutMePhoto" class="draggable dialog grad01">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">Me</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                <img src="./assets/About me.jpg">
             </div>
 
         </div>
 
-                 
-        
+        <!-- END DIALOG ABOUT ME PHOTO -->
 
+        <!-- DIALOG CONTACT ME -->
+
+        <div id="dialogContactMe" class="draggable dialog grad01">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">Contact Me</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1 p-3 px-5 dark textB">
+                <p>Se mi cerchi mi trovi qui : </p><br>
+                <a href="" target="_blank">Facebook </a>
+                <br> <a href="" target="_blank">Twitter </a>
+                <br> <a href="" target="_blank">Instagram</a>
+            </div>
+
+        </div>
+
+        <!-- END DIALOG CONTACT ME -->
 
 
         <!-- <div class="dialog" id="dialog_folder_inside">
