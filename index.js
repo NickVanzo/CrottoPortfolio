@@ -72,6 +72,20 @@ $(function () {
                 dialogStyle.width = "35%";
                 openDialog("#dialogBates05", "", this.id, "");
                 break;
+            case "brucke":
+                dialogStyle.width = "28%";
+                openDialog("#dialogBrucke01", "", this.id, "");
+                openDialog("#dialogBrucke02", "", this.id, "");
+                openDialog("#dialogBrucke03", "", this.id, "");
+                openDialog("#dialogBrucke04", "", this.id, "");
+                openDialog("#dialogBrucke05", "", this.id, "");
+                openDialog("#dialogBrucke06", "", this.id, "");
+                openDialog("#dialogBrucke07", "", this.id, "");
+                openDialog("#dialogBrucke08", "", this.id, "");
+                openDialog("#dialogBrucke09", "", this.id, "");
+                openDialog("#dialogBruckeG1", "", this.id, "");
+                openDialog("#dialogBruckeG2", "", this.id, "");
+
             default:
         }
     });
