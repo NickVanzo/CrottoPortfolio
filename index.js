@@ -8,6 +8,10 @@ var dialogStyle = {
 //prende tutti gli elementi con class "draggable" e li rende draggable()
 $(".draggable").draggable();
 
+$(".dialog").resizable();
+
+$(".innerMain").resizable(); 
+
 //al caricamento della pagina
 $(window).on("load", function () {
 
