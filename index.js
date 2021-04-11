@@ -8,13 +8,11 @@ var dialogStyle = {
 //prende tutti gli elementi con class "draggable" e li rende draggable()
 $(".draggable").draggable();
 
-$(".dialog").resizable();
-
-$(".innerMain").resizable(); 
 
 //al caricamento della pagina
 $(window).on("load", function () {
-
+    //reset di tutti i dialog
+    $(".dialog").css("z-index", 0)
 });
 
 
@@ -42,41 +40,49 @@ $(function () {
         switch (this.id) {
             case "randomStuff":
                 openDialog("#dialogRandomStuff", "randomStuff", this.id, "left center");
-                //porta davanti la finestra cliccata
-                bringToFront("#dialogRandomStuff");
                 break;
             case "contact_me":
                 dialogStyle.width = "30%";
                 openDialog("#dialogContactMe", "contact_me", this.id, "left center");
-                //porta davanti la finestra cliccata
-                bringToFront("#dialogContactMe");
                 break;
             case "about_me":
                 dialogStyle.width = "50%";
                 openDialog("#dialogAboutMe", "About me", this.id, "left center");
                 dialogStyle.width = "203px";
                 openDialog("#dialogAboutMePhoto", "Me", this.id, "top");
-                //porta davanti la finestra cliccata
-                bringToFront("#dialogAboutMePhoto");
                 break;
             case "works":
                 dialogStyle.width = "30%";
                 openDialog("#dialogWorks", "works", this.id, "left center");
-                //porta davanti la finestra cliccata
-                bringToFront("#dialogWorks");
                 break;
             default:
         }
-
-
-
     });
+
+    $(".dialog").on("click", function () {
+        bringToFront("#"+this.id);
+    });
+
 });
 
 //imposto lo z-index a 9999 ==> la finestra cliccata deve essere davanti a tutto
-// ############ DA AGGIUSTARE ############ 
 function bringToFront(dialog) {
-    $(dialog).css("zIndex", 9999);
+
+    //valore di zIndex di default
+    var index_highest = 0;   
+    
+    //per ogni elemento che ha class .dialog
+    $(".dialog").each(function() {
+
+        // always use a radix when using parseInt
+        var index_current = parseInt($(this).css("zIndex"), 10);
+        if(index_current >= index_highest) {
+            index_highest = index_current;
+        }
+    });
+
+    //imposto il nuovo zIndex
+    $(dialog).css("zIndex", index_highest + 1);
 }
 
 // chiudi tutto 

@@ -36,11 +36,11 @@
     background-color: #161616;
   }
 
-  .dialogContent {
-    height: 100%;
+  /*.dialogContent {
+    height: 88%;
     resize: none;
-    display: block; 
-  }
+    margin-bottom: 3px;
+  }*/
 
   #elementContactMe {
     position: fixed;
