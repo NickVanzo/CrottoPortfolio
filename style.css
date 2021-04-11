@@ -33,29 +33,8 @@
 
   .dialog {
     display: none;
-<<<<<<< HEAD
-    background-color: #161616;
-   
-  }
-  .content {
-   
-      height: 75% ;
-      resize: none;
-      display: block; 
-      
-      
-  
-=======
->>>>>>> main
   }
 
-<<<<<<< Updated upstream
-  /*.dialogContent {
-    height: 88%;
-    resize: none;
-    margin-bottom: 3px;
-  }*/
-=======
   .dialogContent {
     height: 75% ;
     resize: none;
@@ -63,7 +42,6 @@
     
     
   }
->>>>>>> Stashed changes
 
   .font1 {
     background-image: linear-gradient(to right,#EC671F, #7143CD);

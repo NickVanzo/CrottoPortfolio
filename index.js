@@ -58,8 +58,13 @@ $(function () {
                 break;
             case "scattofisso":
                 dialogStyle.width = "22.5%";
-                openDialog("#dialogScattofissoPranzo", "Scattofisso pack", this.id, "top");
-                openDialog("#dialogScattofissoPranzo2", "Scattofisso - delivery app", this.id, "top");
+                openDialog("#dialogScattofissoPranzo", "Scattofisso pack", this.id, "left center");
+                openDialog("#dialogScattofissoPranzo2", "Scattofisso - delivery app", this.id, "top center");
+                dialogStyle.width = "50%";
+                openDialog("#dialogScattofissoPranzo3", "Brucke - pack", this.id, "right center")
+                openDialog("#dialogScattofissoPranzo4", "Brucke - Pack", this.id, "bottom center");
+                dialogStyle.width = "25%";
+                openDialog("#dialogScattofissoPhoto", "Brucke - dettagli", this.id, "right top");
                 break;
             case "bates":
                 dialogStyle.width = "28%";
