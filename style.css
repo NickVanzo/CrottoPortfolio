@@ -38,9 +38,7 @@
   .dialogContent {
     height: 75% ;
     resize: none;
-    display: block; 
-    
-    
+    display: block;     
   }
 
   .font1 {
@@ -49,6 +47,11 @@
 
   .fontForScattofisso {
     background-color: #4934CF;
+  }
+
+  .closeButton {
+    width: "30px";
+    height: "30px";
   }
   
   #elementContactMe {
