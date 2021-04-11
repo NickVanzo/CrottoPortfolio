@@ -55,6 +55,11 @@ $(function () {
                 dialogStyle.width = "30%";
                 openDialog("#dialogWorks", "works", this.id, "left center");
                 break;
+            case "scattofisso":
+                dialogStyle.width = "22.5%";
+                openDialog("#dialogScattofissoPranzo", "Scattofisso pack", this.id, "top");
+                openDialog("#dialogScattofissoPranzo2", "Scattofisso - delivery app", this.id, "top");
+                break;
             default:
         }
     });

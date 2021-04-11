@@ -33,7 +33,6 @@
 
   .dialog {
     display: none;
-    background-color: #161616;
   }
 
   /*.dialogContent {
@@ -42,6 +41,14 @@
     margin-bottom: 3px;
   }*/
 
+  .font1 {
+    background-image: linear-gradient(to right,#EC671F, #7143CD);
+  }
+
+  .fontForScattofisso {
+    background-color: #4934CF;
+  }
+  
   #elementContactMe {
     position: fixed;
     top: 5%;
