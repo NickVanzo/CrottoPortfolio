@@ -30,6 +30,7 @@ function openDialog(dialogName, title, idParent, position) {
     //aggiungo il css
     $(dialogName).css(dialogStyle);
 
+    bringToFront(dialogName);
 }
 
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)
@@ -54,6 +55,22 @@ $(function () {
             case "works":
                 dialogStyle.width = "30%";
                 openDialog("#dialogWorks", "works", this.id, "left center");
+                break;
+            case "scattofisso":
+                dialogStyle.width = "22.5%";
+                openDialog("#dialogScattofissoPranzo", "Scattofisso pack", this.id, "top");
+                openDialog("#dialogScattofissoPranzo2", "Scattofisso - delivery app", this.id, "top");
+                break;
+            case "bates":
+                dialogStyle.width = "28%";
+                openDialog("#dialogBates01", "", this.id, "");
+                dialogStyle.width = "20%";
+                openDialog("#dialogBates02", "", this.id, "");
+                dialogStyle.width = "28%";
+                openDialog("#dialogBates03", "", this.id, "");
+                openDialog("#dialogBates04", "", this.id, "");
+                dialogStyle.width = "35%";
+                openDialog("#dialogBates05", "", this.id, "");
                 break;
             default:
         }

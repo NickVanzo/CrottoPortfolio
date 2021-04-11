@@ -51,7 +51,7 @@
         <div id="dialogWorks" class="dialog draggable grad01">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA"> Works </p>
-                <img src="assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+                <img src="assets/_SVG UI/WIN_CLOSE.svg"  width="30px" height="30px" />
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start text-center ml-1 mr-1 mb-1 dark">
                 <div class="m-3">
@@ -74,13 +74,13 @@
                     <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                     <label class="d-block textA">Cartella 5</label>
                 </div>
-                <div class="m-3">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                    <label class="d-block textA">Cartella 6</label>
+                <div class="m-3" >
+                    <img class="folder" id="scattofisso"src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
+                    <label class="d-block textA">Scattofisso</label>
                 </div>
                 <div class="m-3">
-                    <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                    <label class="d-block textA">Cartella 7</label>
+                    <img id="bates" class="folder" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
+                    <label class="d-block textA">Bates Festival <br/> (Branding)</label>
                 </div>
                 <div class="m-3">
                     <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
@@ -102,20 +102,20 @@
         <!-- DIALOG ABOUT ME -->
 
         <div id="dialogAboutMe" class="draggable dialog grad01">
-            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
-                <p class="textA">About me </p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
-            </div>
-            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <p class="textB" style="padding: 30px;">
-                    Ciao<br /><br />Mi chiamo <span class="textGrad01">Francesco Crotto</span>, sono un Graphic designer
-                    e vivo a Torino, in
-                    Italia.<br /><br />
-                    Mi piace il design, la musica, i colori, dare un'immagine alle cose e costruire nuovi universi di
-                    senso, oltre alla
-                    birra naturalmente.
-                </p>
-            </div>
+                <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                    <p class="textA">About me </p>
+                    <img src="./assets/_SVG UI/WIN_CLOSE.svg" width="30px" height="30px" />
+                </div>
+                <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                    <p class="textB" style="padding: 30px;">
+                        Ciao<br /><br />Mi chiamo <span class="textGrad01">Francesco Crotto</span>, sono un Graphic designer
+                        e vivo a Torino, in
+                        Italia.<br /><br />
+                        Mi piace il design, la musica, i colori, dare un'immagine alle cose e costruire nuovi universi di
+                        senso, oltre alla
+                        birra naturalmente.
+                    </p>
+                </div>
         </div>
 
         <!-- END DIALOG ABOUT ME -->
@@ -125,12 +125,11 @@
         <div id="dialogAboutMePhoto" class="draggable dialog grad01">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Me</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" width="30px" height="30px" />
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
                 <img src="./assets/About me.jpg">
             </div>
-
         </div>
 
         <!-- END DIALOG ABOUT ME PHOTO -->
@@ -140,7 +139,7 @@
         <div id="dialogContactMe" class="draggable dialog grad01">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Contact Me</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg"  width="30px" height="30px" />
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 p-3 px-5 dark textB">
                 <p>Se mi cerchi mi trovi qui : </p><br>
@@ -152,6 +151,73 @@
 
         <!-- END DIALOG CONTACT ME -->
 
+        <!-- DIALOG SCATTOFISSO-->
+        <div id="dialogScattofissoPranzo" class="draggable dialog fontForScattofisso">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3 fontForScattofisso" >
+                <p class="textA">Scattofisso - delivery app</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
+                <img src="./assets/Scattofisso/Laboratorio mobile.png" width="300px">
+            </div>
+        </div>
+        <!-- DIALOGS BATES -->
+
+        <div id="dialogBates01" class="draggable dialog bates" style="background:#EE4783">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">Bates</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
+                <img src="./assets/Bates/Bates_logo.gif" alt="Bates Logo" width="100%"/>
+            </div>
+        </div>
+        
+        <div id="dialogBates02" class="draggable dialog bates" style="background:#EE4783">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">Bates</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
+                <img src="./assets/Bates/Bates_keys.jpg" alt="Bates Key" width="100%"/>
+            </div>
+        </div>
+
+        <div id="dialogBates03" class="draggable dialog bates" style="background:#EE4783">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">Bates</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
+                <img src="./assets/Bates/Bates_poster.jpg" alt="Bates Poster" width="100%"/>
+            </div>
+        </div>
+
+        <div id="dialogBates04" class="draggable dialog bates" style="background:#EE4783">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">Bates</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
+                <img src="./assets/Bates/Bates_schermo.jpg" alt="Bates Schermo" width="100%"/>
+            </div>
+        </div>
+
+        <div id="dialogBates05" class="draggable dialog bates" style="background:#EE4783">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
+                <p class="textA">Bates</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
+                <video width="100%" controls>
+                    <source src="./assets/Bates/Bates_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+            </div>
+        </div>
+
+        <!-- END DIALOGS BATES -->
+
         <!-- <div class="dialog" id="dialog_folder_inside">
                 <div class="row-sm text-center">
                     <div class="  text-center m-3 btn">
@@ -159,12 +225,16 @@
                         <label class="text-white font-weight-bold d-block" for="inside_1">Inside 1</label>
                     </div>
 
-                    <div class=" text-center m-3 btn">
-                        <i id="inside_2" class="fa fa-file fa-3x text-danger" aria-hidden="true"></i>
-                        <label class="text-white font-weight-bold d-block" for="inside_2">Inside 2</label>
-                    </div>
-                </div>
-            </div> -->
+        <div id="dialogScattofissoPranzo2" class="draggable dialog fontForScattofisso">
+            <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3 fontForScattofisso" >
+                <p class="textA">Scattofisso - delivery app</p>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" width="30px" height="30px" />
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
+                <img src="./assets/Scattofisso/Negozio mobile.png" width="300px">
+            </div>
+        </div>
+    
 
         <!-- End Dialog Boxes-->
 
