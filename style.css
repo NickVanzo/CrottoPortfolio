@@ -34,13 +34,33 @@
   .dialog {
     display: none;
     background-color: #161616;
+   
+  }
+  .content {
+   
+      height: 75% ;
+      resize: none;
+      display: block; 
+      
+      
+  
   }
 
+<<<<<<< Updated upstream
   /*.dialogContent {
     height: 88%;
     resize: none;
     margin-bottom: 3px;
   }*/
+=======
+  .dialogContent {
+    height: 75% ;
+    resize: none;
+    display: block; 
+    
+    
+  }
+>>>>>>> Stashed changes
 
   #elementContactMe {
     position: fixed;
