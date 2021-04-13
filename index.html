@@ -51,7 +51,7 @@
         <div id="dialogWorks" class="dialog draggable grad01">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA"> Works </p>
-                <img src="assets/_SVG UI/WIN_CLOSE.svg"  class="closeButton" />
+                <img src="assets/_SVG UI/WIN_CLOSE.svg"  class="closeButton"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start text-center ml-1 mr-1 mb-1 dark">
                 <div class="m-3">
@@ -101,10 +101,10 @@
 
         <!-- DIALOG ABOUT ME -->
 
-        <div id="dialogAboutMe" class="draggable dialog grad01">
+        <div id="dialogAboutMe" class="draggable dialog grad01 aboutMe">
                 <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                     <p class="textA">About me </p>
-                    <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton"/>
+                    <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onclick="closeWindowsOfProject('aboutMe');"/>
                 </div>
                 <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
                     <p class="textB" style="padding: 30px;">
@@ -122,10 +122,10 @@
 
         <!-- DIALOG ABOUT ME PHOTO-->
 
-        <div id="dialogAboutMePhoto" class="draggable dialog grad01">
+        <div id="dialogAboutMePhoto" class="draggable dialog grad01 aboutMe">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Me</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onclick="closeWindowsOfProject('aboutMe');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
                 <img src="./assets/About me.jpg">
@@ -136,10 +136,10 @@
 
         <!-- DIALOG CONTACT ME -->
 
-        <div id="dialogContactMe" class="draggable dialog grad01">
+        <div id="dialogContactMe" class="draggable dialog grad01 contactMe">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Contact Me</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg"  class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg"  class="closeButton" onClick="closeWindowsOfProject('contactMe');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 p-3 px-5 dark textB">
                 <p>Se mi cerchi mi trovi qui : </p><br>
@@ -152,50 +152,50 @@
         <!-- END DIALOG CONTACT ME -->
 
         <!-- DIALOG SCATTOFISSO-->
-        <div id="dialogScattofissoPranzo" class="draggable dialog fontForScattofisso">
+        <div id="dialogScattofissoPranzo" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3 fontForScattofisso" >
                 <p class="textA">Scattofisso - delivery app</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton"/>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
                 <img src="./assets/Scattofisso/Laboratorio mobile.png" width="300px">
             </div>
         </div>
 
-        <div id="dialogScattofissoPranzo2" class="draggable dialog fontForScattofisso">
+        <div id="dialogScattofissoPranzo2" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3 fontForScattofisso" >
                 <p class="textA">Scattofisso - delivery app</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
                 <img src="./assets/Scattofisso/Negozio mobile.png" width="300px">
             </div>
         </div>
 
-        <div id="dialogScattofissoPranzo4" class="draggable dialog fontForScattofisso">
+        <div id="dialogScattofissoPranzo4" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3 fontForScattofisso" >
                 <p class="textA">Brucke - Pack</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
                 <img src="./assets/Scattofisso/laboratorio.png" width="700px">
             </div>
         </div>
 
-        <div id="dialogScattofissoPranzo3" class="draggable dialog fontForScattofisso">
+        <div id="dialogScattofissoPranzo3" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3 fontForScattofisso" >
                 <p class="textA">Brucke - Pack</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
                 <img src="./assets/Scattofisso/dettaglio.png" width="700px">
             </div>
         </div>
 
-        <div id="dialogScattofissoPhoto" class="draggable dialog fontForScattofisso">
+        <div id="dialogScattofissoPhoto" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3 fontForScattofisso">
                 <p class="textA">Brucke - Dettagli</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
                 <img src="./assets/Scattofisso/Scattofisso Presentazione2.jpg" width="350px">
@@ -207,7 +207,7 @@
         <div id="dialogBates01" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton"/>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_logo.gif" alt="Bates Logo" width="100%"/>
@@ -217,7 +217,7 @@
         <div id="dialogBates02" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_keys.jpg" alt="Bates Key" width="100%"/>
@@ -227,7 +227,7 @@
         <div id="dialogBates03" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_poster.jpg" alt="Bates Poster" width="100%"/>
@@ -237,7 +237,7 @@
         <div id="dialogBates04" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_schermo.jpg" alt="Bates Schermo" width="100%"/>
@@ -247,7 +247,7 @@
         <div id="dialogBates05" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <video width="100%" controls>
@@ -264,7 +264,7 @@
         <div id="dialogBrucke01" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A1.JPG" alt="bruke a1" width="100%"/>
@@ -274,7 +274,7 @@
         <div id="dialogBrucke02" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A2.JPG" alt="bruke a2" width="100%"/>
@@ -284,7 +284,7 @@
         <div id="dialogBrucke03" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A3.JPG" alt="bruke a3" width="100%"/>
@@ -294,7 +294,7 @@
         <div id="dialogBrucke04" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A4.JPG" alt="bruke a4" width="100%"/>
@@ -304,7 +304,7 @@
         <div id="dialogBrucke05" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A5.JPG" alt="bruke a5" width="100%"/>
@@ -314,7 +314,7 @@
         <div id="dialogBrucke06" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A6.JPG" alt="bruke a6" width="100%"/>
@@ -324,7 +324,7 @@
         <div id="dialogBrucke07" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A7.JPG" alt="bruke a7" width="100%"/>
@@ -334,7 +334,7 @@
         <div id="dialogBrucke08" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A8.JPG" alt="bruke a8" width="100%"/>
@@ -345,7 +345,7 @@
         <div id="dialogBrucke09" class="draggable dialog brucke"style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/A9.JPG" alt="bruke a9" width="100%"/>
@@ -355,7 +355,7 @@
         <div id="dialogBruckeG1" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/G1.gif" alt="bruke G1" width="100%"/>
@@ -365,7 +365,7 @@
         <div id="dialogBruckeG2" class="draggable dialog brucke" style="background:#00B674">
             <div class="dialogHeader d-flex justify-content-between align-items-baseline pl-3">
                 <p class="textA">Bates</p>
-                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" />
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="bg-light" class="closeButton" onClick="closeWindowsOfProject('brucke');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Brucke/G2.gif" alt="bruke G2" width="100%"/>

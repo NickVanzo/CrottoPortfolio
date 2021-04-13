@@ -15,7 +15,6 @@ $(window).on("load", function () {
     $(".dialog").css("z-index", 0)
 });
 
-
 function openDialog(dialogName, title, idParent, position) {
 
     //mostro il dialog
@@ -90,7 +89,6 @@ $(function () {
                 openDialog("#dialogBrucke09", "", this.id, "");
                 openDialog("#dialogBruckeG1", "", this.id, "");
                 openDialog("#dialogBruckeG2", "", this.id, "");
-
             default:
         }
     });
@@ -127,3 +125,7 @@ $(function () {
         $(".dialog").hide();
     });
 });
+
+function closeWindowsOfProject(projectID) {
+    $("." + projectID).hide();
+}
