@@ -4,6 +4,7 @@ var dialogStyle = {
     "top": "25%",
     "left": "25%"
 }
+var angle = 0;
 
 //prende tutti gli elementi con class "draggable" e li rende draggable()
 $(".draggable").draggable();
@@ -13,6 +14,9 @@ $(".draggable").draggable();
 $(window).on("load", function () {
     //reset di tutti i dialog
     $(".dialog").css("z-index", 0)
+
+    //rotazione del logo
+    rotateLogo(angle);
 });
 
 function openDialog(dialogName, idParent, delay) {
@@ -94,7 +98,7 @@ $(function () {
     });
 
     $(".dialog").on("click", function () {
-        bringToFront("#"+this.id);
+        bringToFront("#" + this.id);
     });
 
 });
@@ -103,14 +107,14 @@ $(function () {
 function bringToFront(dialog) {
 
     //valore di zIndex di default
-    var index_highest = 0;   
-    
+    var index_highest = 0;
+
     //per ogni elemento che ha class .dialog
-    $(".dialog").each(function() {
+    $(".dialog").each(function () {
 
         // always use a radix when using parseInt
         var index_current = parseInt($(this).css("zIndex"), 10);
-        if(index_current >= index_highest) {
+        if (index_current >= index_highest) {
             index_highest = index_current;
         }
     });
@@ -128,4 +132,11 @@ $(function () {
 
 function closeWindowsOfProject(projectID) {
     $("." + projectID).fadeOut(500);
+}
+
+function rotateLogo(angle) {
+    setInterval(function () { 
+        document.getElementById("logo").style.transform = "rotate(" + (angle - 0.2) + "deg)"; 
+        angle -= 0.2; 
+    }, 10);
 }
