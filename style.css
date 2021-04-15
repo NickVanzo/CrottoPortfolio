@@ -35,6 +35,10 @@
     display: none;
   }
 
+  .dialogHeader{
+    height: 26px !important;
+  } 
+
   .dialogContent {
     height: 75% ;
     resize: none;
