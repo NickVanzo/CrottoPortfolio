@@ -24,7 +24,7 @@ function openDialog(dialogName, idParent, delay, top, left) {
     dialogStyle.top = top;
     dialogStyle.left = left;
     //mostro il dialog
-    $(dialogName).fadeIn(delay);
+    $(dialogName).delay(delay).fadeIn(500);
 
     //prendo la posizione dell'elemento su cui faccio dblclick
     let positionParent = $("#" + idParent).offset();
@@ -45,56 +45,58 @@ $(function () {
 
         switch (this.id) {
             case "randomStuff":
-                openDialog("#dialogRandomStuff", this.id, 1000);
+                openDialog("#dialogRandomStuff", this.id, 0);
                 break;
             case "contact_me":
                 dialogStyle.width = "30%";
-                openDialog("#dialogContactMe", this.id, 1000, "35%", "35%");
+                openDialog("#dialogContactMe", this.id, 0, "35%", "35%");
                 break;
             case "about_me":
                 dialogStyle.width = "50%";
-                openDialog("#dialogAboutMe", this.id, 1000, "30%", "10  %");
+                openDialog("#dialogAboutMe", this.id, 0, "30%", "10  %");
                 dialogStyle.width = "203px";
-                openDialog("#dialogAboutMePhoto", this.id, 2000, "70%", "5%");
+                openDialog("#dialogAboutMePhoto", this.id, 1000, "70%", "5%");
                 break;
             case "works":
                 dialogStyle.width = "42%";
-                openDialog("#dialogWorks", this.id, 1000, "10%", "40%");
+                openDialog("#dialogWorks", this.id, 0, "10%", "40%");
                 break;
             case "scattofisso":
                 dialogStyle.width = "22.5%";
-                openDialog("#dialogScattofissoPranzo", this.id, 1000, "25%", "75%");
-                openDialog("#dialogScattofissoPranzo2", this.id, 2000, "40%", "2%");
+                openDialog("#dialogScattofissoPranzo", this.id, 0, "25%", "75%");
+                openDialog("#dialogScattofissoPranzo2", this.id, 1000, "40%", "2%");
                 dialogStyle.width = "50%";
-                openDialog("#dialogScattofissoPranzo3", this.id, 3000, "2%", "5%");
-                openDialog("#dialogScattofissoPranzo4", this.id, 4000, "45%", "25%");
+                openDialog("#dialogScattofissoPranzo3", this.id, 2000, "2%", "5%");
+                openDialog("#dialogScattofissoPranzo4", this.id, 3000, "45%", "25%");
                 dialogStyle.width = "25%";
-                openDialog("#dialogScattofissoPhoto", this.id, 5000, "3%", "65%");
+                openDialog("#dialogScattofissoPhoto", this.id, 4000, "3%", "65%");
                 break;
             case "bates":
                 dialogStyle.width = "28%";
-                openDialog("#dialogBates01", this.id, 1000, "5%", "10%");
+                openDialog("#dialogBates01", this.id, 0, "5%", "10%");
+                dialogStyle.width = "40%";
+                openDialog("#dialogBates06", this.id, 1000, "55%", "22%");
                 dialogStyle.width = "20%";
                 openDialog("#dialogBates02", this.id, 2000, "30%", "5%");
                 dialogStyle.width = "28%";
-                openDialog("#dialogBates03", this.id, 3000, "50%", "50%");
+                openDialog("#dialogBates03", this.id, 3000, "40%", "70%");
                 openDialog("#dialogBates04", this.id, 4000, "60%", "60%");
                 dialogStyle.width = "35%";
-                openDialog("#dialogBates05", this.id, 5000, "15%", "40%");
+                openDialog("#dialogBates05", this.id, 5000, "7%", "50%");
                 break;
             case "brucke":
                 dialogStyle.width = "28%";
-                openDialog("#dialogBrucke01", this.id, 1000);
-                openDialog("#dialogBrucke02", this.id, 2000);
-                openDialog("#dialogBrucke03", this.id, 3000);
-                openDialog("#dialogBrucke04", this.id, 4000);
-                openDialog("#dialogBrucke05", this.id, 5000);
-                openDialog("#dialogBrucke06", this.id, 6000);
-                openDialog("#dialogBrucke07", this.id, 7000);
-                openDialog("#dialogBrucke08", this.id, 8000);
-                openDialog("#dialogBrucke09", this.id, 9000);
-                openDialog("#dialogBruckeG1", this.id, 10000);
-                openDialog("#dialogBruckeG2", this.id, 11000);
+                openDialog("#dialogBrucke01", this.id, 0);
+                openDialog("#dialogBrucke02", this.id, 1000);
+                openDialog("#dialogBrucke03", this.id, 2000);
+                openDialog("#dialogBrucke04", this.id, 3000);
+                openDialog("#dialogBrucke05", this.id, 4000);
+                openDialog("#dialogBrucke06", this.id, 5000);
+                openDialog("#dialogBrucke07", this.id, 6000);
+                openDialog("#dialogBrucke08", this.id, 7000);
+                openDialog("#dialogBrucke09", this.id, 8000);
+                openDialog("#dialogBruckeG1", this.id, 9000);
+                openDialog("#dialogBruckeG2", this.id, 10000);
             default:
         }
     });

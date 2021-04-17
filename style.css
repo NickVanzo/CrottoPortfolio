@@ -11,6 +11,7 @@
   }  
  
   .textA {
+    font-family: 'Raleway';
     font-weight: 400;
     font-size: 16px;
     line-height: 18.78px;
@@ -18,6 +19,7 @@
   }
 
   .textB {
+    font-family: 'Raleway';
     font-weight: 600;
     font-size: 28px;
     line-height: 30.74px;
@@ -25,6 +27,7 @@
   }
 
   .textC {
+    font-family: 'Raleway';
     font-weight: 400;
     font-size: 13px;
     line-height: 15.26px;
@@ -43,6 +46,10 @@
     height: 75% ;
     resize: none;
     display: block;     
+  }
+
+  .dialogContent:hover{
+    cursor:default!important;
   }
 
   .font1 {
@@ -88,6 +95,12 @@
 
   #dialogAboutMePhoto .dialogContent img{
     width: 100%;
+  }
+
+  #dialogContactMe a:hover{
+    background: -webkit-linear-gradient(56deg, #1FEC96 0%, #7143CD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   #chiudiTutto{
