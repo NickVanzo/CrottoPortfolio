@@ -58,7 +58,7 @@ $(function () {
                 openDialog("#dialogAboutMePhoto", this.id, 2000, "70%", "5%");
                 break;
             case "works":
-                dialogStyle.width = "30%";
+                dialogStyle.width = "42%";
                 openDialog("#dialogWorks", this.id, 1000, "10%", "60%");
                 break;
             case "scattofisso":
