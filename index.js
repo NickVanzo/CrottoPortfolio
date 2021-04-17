@@ -63,13 +63,13 @@ $(function () {
                 break;
             case "scattofisso":
                 dialogStyle.width = "22.5%";
-                openDialog("#dialogScattofissoPranzo", this.id, 1000);
-                openDialog("#dialogScattofissoPranzo2", this.id, 2000);
+                openDialog("#dialogScattofissoPranzo", this.id, 1000, "25%", "75%");
+                openDialog("#dialogScattofissoPranzo2", this.id, 2000, "40%", "2%");
                 dialogStyle.width = "50%";
-                openDialog("#dialogScattofissoPranzo3", this.id, 3000)
-                openDialog("#dialogScattofissoPranzo4", this.id, 4000);
+                openDialog("#dialogScattofissoPranzo3", this.id, 3000, "2%", "5%");
+                openDialog("#dialogScattofissoPranzo4", this.id, 4000, "45%", "25%");
                 dialogStyle.width = "25%";
-                openDialog("#dialogScattofissoPhoto", this.id, 5000);
+                openDialog("#dialogScattofissoPhoto", this.id, 5000, "3%", "65%");
                 break;
             case "bates":
                 dialogStyle.width = "28%";
