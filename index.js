@@ -53,13 +53,13 @@ $(function () {
                 break;
             case "about_me":
                 dialogStyle.width = "50%";
-                openDialog("#dialogAboutMe", this.id, 1000);
+                openDialog("#dialogAboutMe", this.id, 1000, "30%", "10  %");
                 dialogStyle.width = "203px";
-                openDialog("#dialogAboutMePhoto", this.id, 2000);
+                openDialog("#dialogAboutMePhoto", this.id, 2000, "70%", "5%");
                 break;
             case "works":
                 dialogStyle.width = "30%";
-                openDialog("#dialogWorks", this.id, 1000);
+                openDialog("#dialogWorks", this.id, 1000, "10%", "60%");
                 break;
             case "scattofisso":
                 dialogStyle.width = "22.5%";
@@ -73,14 +73,14 @@ $(function () {
                 break;
             case "bates":
                 dialogStyle.width = "28%";
-                openDialog("#dialogBates01", this.id, 1000);
+                openDialog("#dialogBates01", this.id, 1000, "5%", "10%");
                 dialogStyle.width = "20%";
-                openDialog("#dialogBates02", this.id, 2000);
+                openDialog("#dialogBates02", this.id, 2000, "30%", "5%");
                 dialogStyle.width = "28%";
-                openDialog("#dialogBates03", this.id, 3000);
-                openDialog("#dialogBates04", this.id, 4000);
+                openDialog("#dialogBates03", this.id, 3000, "50%", "50%");
+                openDialog("#dialogBates04", this.id, 4000, "60%", "60%");
                 dialogStyle.width = "35%";
-                openDialog("#dialogBates05", this.id, 5000);
+                openDialog("#dialogBates05", this.id, 5000, "15%", "40%");
                 break;
             case "brucke":
                 dialogStyle.width = "28%";
