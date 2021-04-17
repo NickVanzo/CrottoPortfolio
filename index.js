@@ -1,8 +1,8 @@
 var dialogStyle = {
     "width": "25%",
-    "position": "absolute",
-    "top": "25%",
-    "left": "25%"
+    "position": "fixed",
+    "top": "50%",
+    "left": "50%"
 }
 var angle = 0;
 
@@ -19,16 +19,18 @@ $(window).on("load", function () {
     rotateLogo(angle);
 });
 
-function openDialog(dialogName, idParent, delay) {
+function openDialog(dialogName, idParent, delay, top, left) {
 
+    dialogStyle.top = top;
+    dialogStyle.left = left;
     //mostro il dialog
     $(dialogName).fadeIn(delay);
 
     //prendo la posizione dell'elemento su cui faccio dblclick
     let positionParent = $("#" + idParent).offset();
     //la imposto nel dialogStyle
-    dialogStyle.top = positionParent.top;
-    dialogStyle.left = positionParent.left;
+    // dialogStyle.top = positionParent.top;
+    // dialogStyle.left = positionParent.left;
 
     //aggiungo il css
     $(dialogName).css(dialogStyle);
@@ -47,7 +49,7 @@ $(function () {
                 break;
             case "contact_me":
                 dialogStyle.width = "30%";
-                openDialog("#dialogContactMe", this.id, 1000);
+                openDialog("#dialogContactMe", this.id, 1000, "35%", "35%");
                 break;
             case "about_me":
                 dialogStyle.width = "50%";
