@@ -59,7 +59,7 @@ $(function () {
                 break;
             case "works":
                 dialogStyle.width = "42%";
-                openDialog("#dialogWorks", this.id, 1000, "10%", "60%");
+                openDialog("#dialogWorks", this.id, 1000, "10%", "40%");
                 break;
             case "scattofisso":
                 dialogStyle.width = "22.5%";
