@@ -108,18 +108,18 @@ $(function () {
                 break;
 
             case "brucke":
+                dialogStyle.width = "30%";
+                openDialog("#dialogBrucke03", this.id, 0, "5%", "3%");
                 dialogStyle.width = "28%";
-                openDialog("#dialogBrucke01", this.id, 0);
-                openDialog("#dialogBrucke02", this.id, 1000);
-                openDialog("#dialogBrucke03", this.id, 2000);
-                openDialog("#dialogBrucke04", this.id, 3000);
-                openDialog("#dialogBrucke05", this.id, 4000);
-                openDialog("#dialogBrucke06", this.id, 5000);
-                openDialog("#dialogBrucke07", this.id, 6000);
-                openDialog("#dialogBrucke08", this.id, 7000);
-                openDialog("#dialogBrucke09", this.id, 8000);
-                openDialog("#dialogBruckeG1", this.id, 9000);
-                openDialog("#dialogBruckeG2", this.id, 10000);
+                openDialog("#dialogBrucke01", this.id, 0, "5%", "65%");
+                dialogStyle.width = "50%";
+                openDialog("#dialogBruckeA9", this.id, 500, "28%", "9%");
+                dialogStyle.width = "26%";
+                openDialog("#dialogBrucke02", this.id, 1000, "63%", "65%")
+                dialogStyle.width = "25%";
+                openDialog("#dialogBruckeG1", this.id, 1500, "40%", "70%");
+                dialogStyle.width = "14%";
+                openDialog("#dialogBruckeG2", this.id, 2000, "66%", "3%");
                 break;
 
             default:
@@ -172,10 +172,12 @@ function rotateLogo(angle) {
 }
 
 /* SLIDESHOW JS */
-var slideIndex = [1,1];
-var slideId = ["pranzoSlides1", "pranzoSlides2"]
+var slideIndex = [1,1,1,1];
+var slideId = ["pranzoSlides1", "pranzoSlides2", "bruckeSlides1", "bruckeSlides2"]
 showSlides(1, 0);
 showSlides(1, 1);
+showSlides(1, 2);
+showSlides(1, 3);
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
