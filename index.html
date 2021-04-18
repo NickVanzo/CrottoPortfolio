@@ -65,8 +65,8 @@
                     <tr>
                         <td>
                             <div class="m-3 px-3 py-2 onHover">
-                                <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Cartella 1</label>
+                                <img id="pranzo" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
+                                <label class="d-block textA">Pranzo<sup>3</sup></label>
                             </div>
                         </td>
                         <td>
@@ -293,7 +293,6 @@
                   </video>
             </div>
         </div>
-
         
         <div id="dialogBates06" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
@@ -314,6 +313,113 @@
         </div>
 
         <!-- END DIALOGS BATES -->
+
+        <!-- DIALOGS PRANZO 3 -->
+        <div id="dialogPranzo01" class="draggable dialog pranzo" style="background:#A53E3E">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Pranzo<sup>3</sup></span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 bg-light">
+                <p class="textA" style="padding: 50px; color:#BF1818;">
+                    Un pranzo completo,<br/> di forma cubica.
+                </p>
+            </div>
+        </div>
+
+        <div id="dialogPranzo02" class="draggable dialog pranzo" style="background:#A53E3E">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Pranzo<sup>3</sup> - Logo</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1">
+                <img src="./assets/Pranzo/logo.png" alt="Pranzo Logo" width="100%"> 
+            </div>
+        </div>
+
+        <div id="dialogPranzo03" class="draggable dialog pranzo" style="background:#A53E3E">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Pranzo<sup>3</sup> - Visual</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1">
+                <img src="./assets/Pranzo/gif_txtr.gif" alt="Pranzo Visual" width="100%"> 
+            </div>
+        </div>
+
+        <div id="dialogPranzo04" class="draggable dialog pranzo" style="background:#A53E3E">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Pranzo<sup>3</sup></span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 bg-light">
+                <p class="textA" style="padding: 50px; color:#BF1818;">
+                    Il progetto nasce come una sfida a realizzare un pranzo completo di forma cubica e diventa un nuovo modo di concepire il pranzo fuori porta, poù comodo, compatto e moderno.<br/><br/>
+                    Dal semplice packaging del prodotto nasce quindi un brand, una linea di tre pranzi, la comunicazione social, un'applicazione di Delivery per ordinarlo ovunque e una campagna strategica nei grandi eventi con un truck personalizzato.
+                </p>
+            </div>
+        </div>
+
+        <div id="dialogPranzo05" class="draggable dialog pranzo" style="background:#A53E3E">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Pranzo<sup>3</sup> - Delivery App</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1">
+                <img src="./assets/Pranzo/gif_mobile.gif" alt="Pranzo Visual" width="100%"> 
+            </div>
+        </div>
+
+        <div id="dialogPranzo06" class="draggable dialog pranzo" style="background:#A53E3E">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Pranzo<sup>3</sup> - Packs</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1">
+                <div class="slideshow-container">
+                    <div class="pranzoSlides1">
+                      <img src="./assets/Pranzo/A1.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="pranzoSlides1">
+                      <img src="./assets/Pranzo/A2.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="pranzoSlides1">
+                      <img src="./assets/Pranzo/A3.jpg" style="width:100%">
+                    </div>
+                  
+                    <a class="prev" onClick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onClick="plusSlides(1, 0)">&#10095;</a>
+                  </div>
+            </div>
+        </div>
+
+        <div id="dialogPranzo07" class="draggable dialog pranzo" style="background:#A53E3E">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Pranzo<sup>3</sup></span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1">
+                <div class="slideshow-container">
+                    <div class="pranzoSlides2">
+                      <img src="./assets/Pranzo/B1.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="pranzoSlides2">
+                      <img src="./assets/Pranzo/B2.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="pranzoSlides2">
+                      <img src="./assets/Pranzo/B3.jpg" style="width:100%">
+                    </div>
+                  
+                    <a class="prev" onClick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onClick="plusSlides(1, 1)">&#10095;</a>
+                  </div>
+            </div>
+        </div>
+        <!-- END DIALOG PRANZO 3 -->
 
         <!-- DIALOGS Brukes -->
 

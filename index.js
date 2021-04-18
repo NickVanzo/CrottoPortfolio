@@ -47,43 +47,66 @@ $(function () {
             case "randomStuff":
                 openDialog("#dialogRandomStuff", this.id, 0);
                 break;
+
             case "contact_me":
                 dialogStyle.width = "30%";
                 openDialog("#dialogContactMe", this.id, 0, "35%", "35%");
                 break;
+
             case "about_me":
                 dialogStyle.width = "50%";
-                openDialog("#dialogAboutMe", this.id, 0, "30%", "10  %");
+                openDialog("#dialogAboutMe", this.id, 500, "30%", "10  %");
                 dialogStyle.width = "203px";
-                openDialog("#dialogAboutMePhoto", this.id, 1000, "70%", "5%");
+                openDialog("#dialogAboutMePhoto", this.id, 0, "70%", "5%");
                 break;
+
             case "works":
                 dialogStyle.width = "42%";
                 openDialog("#dialogWorks", this.id, 0, "10%", "40%");
                 break;
+
             case "scattofisso":
                 dialogStyle.width = "22.5%";
                 openDialog("#dialogScattofissoPranzo", this.id, 0, "25%", "75%");
-                openDialog("#dialogScattofissoPranzo2", this.id, 1000, "40%", "2%");
+                openDialog("#dialogScattofissoPranzo2", this.id, 500, "40%", "2%");
                 dialogStyle.width = "50%";
-                openDialog("#dialogScattofissoPranzo3", this.id, 2000, "2%", "5%");
-                openDialog("#dialogScattofissoPranzo4", this.id, 3000, "45%", "25%");
+                openDialog("#dialogScattofissoPranzo3", this.id, 1000, "2%", "5%");
+                openDialog("#dialogScattofissoPranzo4", this.id, 1500, "45%", "25%");
                 dialogStyle.width = "25%";
-                openDialog("#dialogScattofissoPhoto", this.id, 4000, "3%", "65%");
+                openDialog("#dialogScattofissoPhoto", this.id, 2000, "3%", "65%");
                 break;
+
             case "bates":
                 dialogStyle.width = "28%";
                 openDialog("#dialogBates01", this.id, 0, "5%", "10%");
                 dialogStyle.width = "40%";
-                openDialog("#dialogBates06", this.id, 1000, "55%", "22%");
+                openDialog("#dialogBates06", this.id, 500, "55%", "22%");
                 dialogStyle.width = "20%";
-                openDialog("#dialogBates02", this.id, 2000, "30%", "5%");
+                openDialog("#dialogBates02", this.id, 1000, "30%", "5%");
                 dialogStyle.width = "28%";
-                openDialog("#dialogBates03", this.id, 3000, "40%", "70%");
-                openDialog("#dialogBates04", this.id, 4000, "60%", "60%");
+                openDialog("#dialogBates03", this.id, 1500, "40%", "70%");
+                openDialog("#dialogBates04", this.id, 2000, "60%", "60%");
                 dialogStyle.width = "35%";
-                openDialog("#dialogBates05", this.id, 5000, "7%", "50%");
+                openDialog("#dialogBates05", this.id, 2500, "7%", "50%");
                 break;
+
+            case "pranzo":
+                dialogStyle.width = "20%";
+                openDialog("#dialogPranzo01", this.id, 0, "2%", "3%");
+                dialogStyle.width = "30%";
+                openDialog("#dialogPranzo03", this.id, 500, "4%", "45%");
+                dialogStyle.width = "25%";
+                openDialog("#dialogPranzo02", this.id, 1000, "22%", "10%");
+                dialogStyle.width = "37%";
+                openDialog("#dialogPranzo04", this.id, 1500, "22%", "60%");
+                dialogStyle.width = "17%";
+                openDialog("#dialogPranzo05", this.id, 2000, "35%", "40%");
+                dialogStyle.width = "30%";
+                openDialog("#dialogPranzo06", this.id, 2500, "50%", "2%");
+                dialogStyle.width = "25%";
+                openDialog("#dialogPranzo07", this.id, 3000, "50%", "63%");
+                break;
+
             case "brucke":
                 dialogStyle.width = "28%";
                 openDialog("#dialogBrucke01", this.id, 0);
@@ -97,7 +120,10 @@ $(function () {
                 openDialog("#dialogBrucke09", this.id, 8000);
                 openDialog("#dialogBruckeG1", this.id, 9000);
                 openDialog("#dialogBruckeG2", this.id, 10000);
+                break;
+
             default:
+                break;
         }
     });
 
@@ -143,4 +169,25 @@ function rotateLogo(angle) {
         document.getElementById("logo").style.transform = "rotate(" + (angle - 0.2) + "deg)"; 
         angle -= 0.2; 
     }, 10);
+}
+
+/* SLIDESHOW JS */
+var slideIndex = [1,1];
+var slideId = ["pranzoSlides1", "pranzoSlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
 }
