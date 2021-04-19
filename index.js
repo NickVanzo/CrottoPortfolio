@@ -122,6 +122,15 @@ $(function () {
                 openDialog("#dialogBruckeG2", this.id, 2000, "66%", "3%");
                 break;
 
+            case "archer":
+                dialogStyle.width = "42.3%";
+                openDialog("#dialogArcherSpeciment", this.id, 0, "10%", "5%");
+                dialogStyle.width = "14.3%";
+                openDialog("#dialogArcherIconSistem", this.id, 0, "60%", "70%");
+                dialogStyle.width = "30%";
+                openDialog("#dialogInfografica", this.id, 0, "15%", "60%");
+                dialogStyle.width = "32.15%";
+                openDialog("#dialogIconSistemPerUnaBiblioteca", this.id, 0, "60%", "35%");
             default:
                 break;
         }
