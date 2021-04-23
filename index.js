@@ -111,26 +111,26 @@ $(function () {
                 dialogStyle.width = "30%";
                 openDialog("#dialogBrucke03", this.id, 0, "5%", "3%");
                 dialogStyle.width = "28%";
-                openDialog("#dialogBrucke01", this.id, 0, "5%", "65%");
+                openDialog("#dialogBrucke01", this.id, 500, "5%", "65%");
                 dialogStyle.width = "50%";
-                openDialog("#dialogBruckeA9", this.id, 500, "28%", "9%");
+                openDialog("#dialogBruckeA9", this.id, 1000, "28%", "9%");
                 dialogStyle.width = "26%";
-                openDialog("#dialogBrucke02", this.id, 1000, "63%", "65%")
+                openDialog("#dialogBrucke02", this.id, 1500, "63%", "65%")
                 dialogStyle.width = "25%";
-                openDialog("#dialogBruckeG1", this.id, 1500, "40%", "70%");
+                openDialog("#dialogBruckeG1", this.id, 2000, "40%", "70%");
                 dialogStyle.width = "14%";
-                openDialog("#dialogBruckeG2", this.id, 2000, "66%", "3%");
+                openDialog("#dialogBruckeG2", this.id, 2500, "66%", "3%");
                 break;
 
             case "archer":
                 dialogStyle.width = "42.3%";
                 openDialog("#dialogArcherSpeciment", this.id, 0, "10%", "5%");
                 dialogStyle.width = "14.3%";
-                openDialog("#dialogArcherIconSistem", this.id, 0, "60%", "70%");
+                openDialog("#dialogArcherIconSistem", this.id, 500, "60%", "70%");
                 dialogStyle.width = "30%";
-                openDialog("#dialogInfografica", this.id, 0, "15%", "60%");
+                openDialog("#dialogInfografica", this.id, 1000, "15%", "60%");
                 dialogStyle.width = "32.15%";
-                openDialog("#dialogIconSistemPerUnaBiblioteca", this.id, 0, "60%", "35%");
+                openDialog("#dialogIconSistemPerUnaBiblioteca", this.id, 1500, "60%", "35%");
             default:
                 break;
         }
