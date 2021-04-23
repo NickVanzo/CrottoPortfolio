@@ -73,6 +73,27 @@
     opacity: 1;
   }
   
+  .fullButton{
+    width: 20px;
+    margin-right: 5px;
+    opacity: 0.4;
+  }
+
+  .fullButton:hover{
+    opacity: 1;
+  }
+
+  .noFullButton{
+    display: none;
+    width: 20px;
+    margin-right: 5px;
+    opacity: 0.4;
+  }
+
+  .noFullButton:hover{
+    opacity: 1;
+  }
+
   #elementContactMe {
     position: fixed;
     top: 5%;

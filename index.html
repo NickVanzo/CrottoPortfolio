@@ -184,7 +184,11 @@
         <div id="dialogAboutMePhoto" class="draggable dialog grad01 aboutMe">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Me</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('aboutMe');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" class="noFullButton" onclick="noFullScreen('dialogAboutMePhoto','203px','70%','5%');"/>
+                    <img src="assets/_SVG UI/icon_full.svg" class="fullButton" onclick="fullScreen('dialogAboutMePhoto','50%','6%','25%');"/>
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('aboutMe');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
                 <img src="./assets/About me.jpg">
@@ -268,7 +272,11 @@
         <div id="dialogBates01" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Bates</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" class="noFullButton hide" onclick="noFullScreen('dialogBates01', '28%', '5%', '10%');">
+                    <img src="assets/_SVG UI/icon_full.svg" class="fullButton" onclick="fullScreen('dialogBates01', '78%', '1%');">
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_logo.gif" alt="Bates Logo" width="100%"/>
