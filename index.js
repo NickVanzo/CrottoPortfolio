@@ -198,13 +198,15 @@ $(".fullButton").on("click", function () {
             style = { width: "78%", top: "1%", left: "10%" };
             break;
 
-        /* TODO: FIX
-                case "fullPranzo06":
-                    projecyID = "#dialogPranzo06";
-                    style = { width: "78% !important", top: "1%", left: "10%" };
-                    console.log(style);
-                    break;
-        */
+        case "fullPranzo06":
+            projectID = "#dialogPranzo06";
+            style = { width: "75%", top: "1%", left: "14%" };
+            break;
+
+        case "fullPranzo07":
+            projectID = "#dialogPranzo07";
+            style = { width: "52%", top: "1%", left: "22%" };
+            break;
 
         default:
             break;
@@ -228,22 +230,17 @@ $(".noFullButton").on("click", function () {
         case "noFullAboutMePhoto":
             projectID = "#dialogAboutMePhoto";
             style = styleAboutMePhoto;
-            console.log(style);
             break;
 
         case "noFullBates01":
             projectID = "#dialogBates01";
             style = styleBates[0];
-            console.log(style);
             break;
 
-        /* TODO: FIX
-                case "noFullPranzo06":
-                    projecyID = "#dialogPranzo06";
-                    style = stylePranzo[5];
-                    console.log(style);
-                    break;
-        */
+        case "noFullPranzo06":
+            projectID = "#dialogPranzo06";
+            style = stylePranzo[5];
+            break;
 
         default:
             break;
