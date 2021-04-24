@@ -20,7 +20,6 @@ var styleArcher = null;
 //prende tutti gli elementi con class "draggable" e li rende draggable()
 $(".draggable").draggable();
 
-
 //al caricamento della pagina
 $(window).on("load", function () {
     //reset di tutti i dialog
@@ -151,10 +150,10 @@ $(".folder").dblclick(function () {
                 5: { width: "14%", top: "66%", left: "3%" }
             };
 
-            openDialog("#dialogBrucke03", 0, styleBrucke[0]);
-            openDialog("#dialogBrucke01", 500, styleBrucke[1]);
+            openDialog("#dialogBrucke01", 0, styleBrucke[0]);
+            openDialog("#dialogBrucke02", 500, styleBrucke[1]);
             openDialog("#dialogBruckeA9", 1000, styleBrucke[2]);
-            openDialog("#dialogBrucke02", 1500, styleBrucke[3])
+            openDialog("#dialogBrucke03", 1500, styleBrucke[3])
             openDialog("#dialogBruckeG1", 2000, styleBrucke[4]);
             openDialog("#dialogBruckeG2", 2500, styleBrucke[5]);
             break;
@@ -190,7 +189,7 @@ $(".fullButton").on("click", function () {
     switch (this.id) {
         case "fullAboutMePhoto":
             projectID = "#dialogAboutMePhoto";
-            style = { width: "50%", top: "6%", left: "25%" };
+            style = { width: "53%", top: "1%", left: "23%" };
             break;
 
         case "fullBates01":
@@ -206,6 +205,31 @@ $(".fullButton").on("click", function () {
         case "fullPranzo07":
             projectID = "#dialogPranzo07";
             style = { width: "52%", top: "1%", left: "22%" };
+            break;
+
+        case "fullBrucke02":
+            projectID = "#dialogBrucke02";
+            style = { width: "80%", top: "1%", left: "10%" };
+            break;
+
+        case "fullBrucke03":
+            projectID = "#dialogBrucke03";
+            style = { width: "79%", top: "1%", left: "10%" };
+            break;
+
+        case "fullBruckeA9":
+            projectID = "#dialogBruckeA9";
+            style = { width: "78%", top: "1%", left: "10%" };
+            break;
+
+        case "fullBruckeG1":
+            projectID = "#dialogBruckeG1";
+            style = { width: "78%", top: "1%", left: "10%" };
+            break;
+
+        case "fullBruckeG2":
+            projectID = "#dialogBruckeG2";
+            style = { width: "52%", top: "1%", left: "25%" };
             break;
 
         default:
@@ -240,6 +264,31 @@ $(".noFullButton").on("click", function () {
         case "noFullPranzo06":
             projectID = "#dialogPranzo06";
             style = stylePranzo[5];
+            break;
+
+        case "noFullBrucke02":
+            projectID = "#dialogBrucke02";
+            style = styleBrucke[1];
+            break;
+
+        case "noFullBrucke03":
+            projectID = "#dialogBrucke03";
+            style = styleBrucke[3];
+            break;
+
+        case "noFullBruckeA9":
+            projectID = "#dialogBruckeA9";
+            style = styleBrucke[2];
+            break;
+
+        case "noFullBruckeG1":
+            projectID = "#dialogBruckeG1";
+            style = styleBrucke[4];
+            break;
+
+        case "noFullBruckeG2":
+            projectID = "#dialogBruckeG2";
+            style = styleBrucke[5];
             break;
 
         default:
