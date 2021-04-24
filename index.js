@@ -6,6 +6,17 @@ var dialogStyle = {
 }
 var angle = 0;
 
+/* New Style x animation fullscreen / noFullscreen */
+var styleContactMe = null;
+var styleAboutMe = null;
+var styleAboutMePhoto = null;
+var styleWorks = null;
+var styleScattoFisso = null;
+var styleBates = null;
+var stylePranzo = null;
+var styleBrucke = null;
+var styleArcher = null;
+
 //prende tutti gli elementi con class "draggable" e li rende draggable()
 $(".draggable").draggable();
 
@@ -19,8 +30,9 @@ $(window).on("load", function () {
     rotateLogo(angle);
 });
 
-function openDialog(dialogName, delay, top, left) {
+function openDialog(dialogName, delay, { width, top, left }) {
 
+    dialogStyle.width = width;
     dialogStyle.top = top;
     dialogStyle.left = left;
     //mostro il dialog
@@ -32,126 +44,219 @@ function openDialog(dialogName, delay, top, left) {
     bringToFront(dialogName);
 }
 
+/*
+function openDialog(dialogName, delay, top, left) {
+
+    dialogStyle.top = top;
+    dialogStyle.left = left;
+    //mostro il dialog
+    $(dialogName).delay(delay).fadeIn(500);
+
+    //aggiungo il css
+    $(dialogName).css(dialogStyle);
+
+    bringToFront(dialogName);
+}*/
+
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)
-$(function () {
-    $(".folder").dblclick(function () {
-        dialogStyle.width = "25%";
 
-        switch (this.id) {
-            case "randomStuff":
-                openDialog("#dialogRandomStuff", 0);
-                break;
+$(".folder").dblclick(function () {
+    dialogStyle.width = "25%";
 
-            case "contact_me":
-                dialogStyle.width = "30%";
-                openDialog("#dialogContactMe", 0, "35%", "35%");
-                break;
+    switch (this.id) {
+        case "randomStuff":
+            openDialog("#dialogRandomStuff", 0);
+            break;
 
-            case "about_me":
-                dialogStyle.width = "50%";
-                openDialog("#dialogAboutMe", 500, "30%", "10%");
-                dialogStyle.width = "203px";
-                openDialog("#dialogAboutMePhoto", 0, "70%", "5%");
-                break;
+        case "contact_me":
+            styleContactMe = { width: "30%", top: "35%", left: "35%" };
+            openDialog("#dialogContactMe", 0, styleContactMe);
+            //dialogStyle.width = "30%";
+            //openDialog("#dialogContactMe", 0, "35%", "35%");
+            break;
 
-            case "works":
-                dialogStyle.width = "42%";
-                openDialog("#dialogWorks", 0, "10%", "40%");
-                break;
+        case "about_me":
+            styleAboutMe = { width: "50%", top: "30%", left: "10%" };
+            openDialog("#dialogAboutMe", 500, styleAboutMe);
+            styleAboutMePhoto = { width: "203px", top: "70%", left: "5%" };
+            openDialog("#dialogAboutMePhoto", 0, styleAboutMePhoto);
+            break;
 
-            case "scattofisso":
-                dialogStyle.width = "22.5%";
-                openDialog("#dialogScattofissoPranzo", 0, "25%", "75%");
-                openDialog("#dialogScattofissoPranzo2", 500, "40%", "2%");
-                dialogStyle.width = "50%";
-                openDialog("#dialogScattofissoPranzo3", 1000, "2%", "5%");
-                openDialog("#dialogScattofissoPranzo4", 1500, "45%", "25%");
-                dialogStyle.width = "25%";
-                openDialog("#dialogScattofissoPhoto", 2000, "3%", "65%");
-                break;
+        case "works":
+            styleWorks = { width: "42%", top: "10%", left: "40%" };
+            openDialog("#dialogWorks", 0, styleWorks);
+            break;
 
-            case "bates":
-                dialogStyle.width = "28%";
-                openDialog("#dialogBates01", 0, "5%", "10%");
-                dialogStyle.width = "40%";
-                openDialog("#dialogBates06", 500, "55%", "22%");
-                dialogStyle.width = "20%";
-                openDialog("#dialogBates02", 1000, "30%", "5%");
-                dialogStyle.width = "28%";
-                openDialog("#dialogBates03", 1500, "40%", "70%");
-                openDialog("#dialogBates04", 2000, "60%", "60%");
-                dialogStyle.width = "35%";
-                openDialog("#dialogBates05", 2500, "7%", "50%");
-                break;
+        case "scattofisso":
+            styleScattoFisso = {
+                0: { width: "22.6%", top: "25%", left: "75%" },
+                1: { width: "22.6%", top: "40%", left: "2%" },
+                2: { width: "50.4%", top: "2%", left: "5%" },
+                3: { width: "50.4%", top: "45%", left: "25%" },
+                4: { width: "25%", top: "3%", left: "65%" }
+            };
 
-            case "pranzo":
-                dialogStyle.width = "20%";
-                openDialog("#dialogPranzo01", 0, "2%", "3%");
-                dialogStyle.width = "30%";
-                openDialog("#dialogPranzo03", 500, "4%", "45%");
-                dialogStyle.width = "25%";
-                openDialog("#dialogPranzo02", 1000, "22%", "10%");
-                dialogStyle.width = "37%";
-                openDialog("#dialogPranzo04", 1500, "22%", "60%");
-                dialogStyle.width = "17%";
-                openDialog("#dialogPranzo05", 2000, "35%", "40%");
-                dialogStyle.width = "30%";
-                openDialog("#dialogPranzo06", 2500, "50%", "2%");
-                dialogStyle.width = "25%";
-                openDialog("#dialogPranzo07", 3000, "50%", "63%");
-                break;
+            openDialog("#dialogScattofisso01", 0, styleScattoFisso[0]);
+            openDialog("#dialogScattofisso02", 500, styleScattoFisso[1]);
+            openDialog("#dialogScattofisso03", 1000, styleScattoFisso[2]);
+            openDialog("#dialogScattofisso04", 1500, styleScattoFisso[3]);
+            openDialog("#dialogScattofissoPhoto", 2000, styleScattoFisso[4]);
+            break;
 
-            case "brucke":
-                dialogStyle.width = "30%";
-                openDialog("#dialogBrucke03", 0, "5%", "3%");
-                dialogStyle.width = "28%";
-                openDialog("#dialogBrucke01", 500, "5%", "65%");
-                dialogStyle.width = "50%";
-                openDialog("#dialogBruckeA9", 1000, "28%", "9%");
-                dialogStyle.width = "26%";
-                openDialog("#dialogBrucke02", 1500, "63%", "65%")
-                dialogStyle.width = "25%";
-                openDialog("#dialogBruckeG1", 2000, "40%", "70%");
-                dialogStyle.width = "14%";
-                openDialog("#dialogBruckeG2", 2500, "66%", "3%");
-                break;
+        case "bates":
+            styleBates = {
+                0: { width: "28%", top: "5%", left: "10%" },
+                1: { width: "40%", top: "55%", left: "22%" },
+                2: { width: "20%", top: "30%", left: "5%" },
+                3: { width: "28%", top: "40%", left: "70%" },
+                4: { width: "28%", top: "60%", left: "60%" },
+                5: { width: "35%", top: "7%", left: "50%" }
+            };
 
-            case "archer":
-                dialogStyle.width = "42.3%";
-                openDialog("#dialogArcherSpeciment", 0, "10%", "5%");
-                dialogStyle.width = "14.3%";
-                openDialog("#dialogArcherIconSistem", 500, "60%", "70%");
-                dialogStyle.width = "30%";
-                openDialog("#dialogInfografica", 1000, "15%", "60%");
-                dialogStyle.width = "32.15%";
-                openDialog("#dialogIconSistemPerUnaBiblioteca", 1500, "60%", "35%");
-            default:
-                break;
-        }
-    });
+            openDialog("#dialogBates01", 0, styleBates[0]);
+            openDialog("#dialogBates06", 500, styleBates[1]);
+            openDialog("#dialogBates02", 1000, styleBates[2]);
+            openDialog("#dialogBates03", 1500, styleBates[3]);
+            openDialog("#dialogBates04", 2000, styleBates[4]);
+            openDialog("#dialogBates05", 2500, styleBates[5]);
+            break;
 
-    $(".dialog").on("click", function () {
-        bringToFront("#" + this.id);
-    });
+        case "pranzo":
+            stylePranzo = {
+                0: { width: "20%", top: "2%", left: "3%" },
+                1: { width: "30%", top: "4%", left: "45%" },
+                2: { width: "25%", top: "22%", left: "10%" },
+                3: { width: "37%", top: "22%", left: "60%" },
+                4: { width: "17%", top: "35%", left: "40%" },
+                5: { width: "30%", top: "50%", left: "2%" },
+                6: { width: "25%", top: "50%", left: "63%" }
+            };
 
-    // quando si clicca sul bottone "fullscreen", questo bottone viene "reso invisibile" tramite display: none;
-    // e il bottone "riduci a icona" (identificato da this.parentElement.children[0] -->
-    // --> questo perchè nel div padre abbiamo posizionato nell'ordine: NO_FULLSCREEN, fullscreen e close, rispettivamente in posizioni [0],1,2)
-    // viene "reso visibile" tramite display: block
-    $(".fullButton").on("click", function () {
-        $(this).css("display", "none");
-        $(this.parentElement.children[0]).css("display", "block");
-    });
+            openDialog("#dialogPranzo01", 0, stylePranzo[0]);
+            openDialog("#dialogPranzo03", 500, stylePranzo[1]);
+            openDialog("#dialogPranzo02", 1000, stylePranzo[2]);
+            openDialog("#dialogPranzo04", 1500, stylePranzo[3]);
+            openDialog("#dialogPranzo05", 2000, stylePranzo[4]);
+            openDialog("#dialogPranzo06", 2500, stylePranzo[5]);
+            openDialog("#dialogPranzo07", 3000, stylePranzo[6]);
+            break;
 
-    // quando si clicca sul bottone "NO fullscreen", questo bottone viene "reso invisibile" tramite display: none;
-    // e il bottone "fullscreen" (identificato da this.parentElement.children[1] -->
-    // --> questo perchè nel div padre abbiamo posizionato nell'ordine: no_fullscreen, FULLSCREEN e close, rispettivamente in posizioni 0,[1],2)
-    // viene "reso visibile" tramite display: block
-    $(".noFullButton").on("click", function () {
-        $(this).css("display", "none");
-        $(this.parentElement.children[1]).css("display", "block");
-    });
+        case "brucke":
+            styleBrucke = {
+                0: { width: "30%", top: "5%", left: "3%" },
+                1: { width: "28%", top: "5%", left: "65%" },
+                2: { width: "50%", top: "28%", left: "9%" },
+                3: { width: "26%", top: "63%", left: "65%" },
+                4: { width: "25%", top: "40%", left: "70%" },
+                5: { width: "14%", top: "66%", left: "3%" }
+            };
+
+            openDialog("#dialogBrucke03", 0, styleBrucke[0]);
+            openDialog("#dialogBrucke01", 500, styleBrucke[1]);
+            openDialog("#dialogBruckeA9", 1000, styleBrucke[2]);
+            openDialog("#dialogBrucke02", 1500, styleBrucke[3])
+            openDialog("#dialogBruckeG1", 2000, styleBrucke[4]);
+            openDialog("#dialogBruckeG2", 2500, styleBrucke[5]);
+            break;
+
+        case "archer":
+            styleArcher = {
+                0: { width: "42.3%", top: "10%", left: "2%" },
+                1: { width: "14.3%", top: "60%", left: "70%" },
+                2: { width: "30%", top: "15%", left: "60%" },
+                3: { width: "32.15%", top: "60%", left: "35%" }
+            };
+
+            openDialog("#dialogArcherSpeciment", 0, styleArcher[0]);
+            openDialog("#dialogArcherIconSistem", 500, styleArcher[1]);
+            openDialog("#dialogInfografica", 1000, styleArcher[2]);
+            openDialog("#dialogIconSistemPerUnaBiblioteca", 1500, styleArcher[3]);
+        default:
+            break;
+    }
 });
+
+// quando si clicca sul bottone "fullscreen", questo bottone viene "reso invisibile" tramite display: none;
+// e il bottone "riduci a icona" (identificato da this.parentElement.children[0] -->
+// --> questo perchè nel div padre abbiamo posizionato nell'ordine: NO_FULLSCREEN, fullscreen e close, rispettivamente in posizioni [0],1,2)
+// viene "reso visibile" tramite display: block
+$(".fullButton").on("click", function () {
+
+    $(this).css("display", "none");
+    $(this.parentElement.children[0]).css("display", "block");
+    let projectID = "";
+    let style;
+
+    switch (this.id) {
+        case "fullAboutMePhoto":
+            projectID = "#dialogAboutMePhoto";
+            style = { width: "50%", top: "6%", left: "25%" };
+            break;
+
+        case "fullBates01":
+            projectID = "#dialogBates01";
+            style = { width: "78%", top: "1%", left: "10%" };
+            break;
+
+        /* TODO: FIX
+                case "fullPranzo06":
+                    projecyID = "#dialogPranzo06";
+                    style = { width: "78% !important", top: "1%", left: "10%" };
+                    console.log(style);
+                    break;
+        */
+
+        default:
+            break;
+    }
+
+    $(projectID).animate(style, "slow");
+
+});
+
+// quando si clicca sul bottone "NO fullscreen", questo bottone viene "reso invisibile" tramite display: none;
+// e il bottone "fullscreen" (identificato da this.parentElement.children[1] -->
+// --> questo perchè nel div padre abbiamo posizionato nell'ordine: no_fullscreen, FULLSCREEN e close, rispettivamente in posizioni 0,[1],2)
+// viene "reso visibile" tramite display: block
+$(".noFullButton").on("click", function () {
+    $(this).css("display", "none");
+    $(this.parentElement.children[1]).css("display", "block");
+    let projectID = "";
+    let style;
+
+    switch (this.id) {
+        case "noFullAboutMePhoto":
+            projectID = "#dialogAboutMePhoto";
+            style = styleAboutMePhoto;
+            console.log(style);
+            break;
+
+        case "noFullBates01":
+            projectID = "#dialogBates01";
+            style = styleBates[0];
+            console.log(style);
+            break;
+
+        /* TODO: FIX
+                case "noFullPranzo06":
+                    projecyID = "#dialogPranzo06";
+                    style = stylePranzo[5];
+                    console.log(style);
+                    break;
+        */
+
+        default:
+            break;
+    }
+
+    $(projectID).animate(style, "slow");
+});
+
+
+$(".dialog").on("click", function () {
+    bringToFront("#" + this.id);
+});
+
 
 //imposto lo z-index a 9999 ==> la finestra cliccata deve essere davanti a tutto
 function bringToFront(dialog) {
@@ -174,30 +279,12 @@ function bringToFront(dialog) {
 }
 
 // chiudi tutto 
-$(function () {
-    $("#chiudiTutto").on("click", function () {
-        $(".dialog").fadeOut(500);
-    });
+$("#chiudiTutto").on("click", function () {
+    $(".dialog").fadeOut(500);
 });
 
 function closeWindowsOfProject(projectID) {
     $("." + projectID).fadeOut(500);
-}
-
-function fullScreen(projectID, width, top, left) {
-    $("#" + projectID).animate({
-        "width": width,
-        "top": top,
-        "left": left
-    }, "slow");
-}
-
-function noFullScreen(projectID, width, top, left) {
-    $("#" + projectID).animate({
-        "width": width,
-        "top": top,
-        "left": left
-    }, "slow");
 }
 
 function rotateLogo(angle) {

@@ -185,8 +185,8 @@
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Me</span>
                 <div class="d-flex align-content-center">
-                    <img src="assets/_SVG UI/icon_nofull.svg" class="noFullButton" onclick="noFullScreen('dialogAboutMePhoto','203px','70%','5%');"/>
-                    <img src="assets/_SVG UI/icon_full.svg" class="fullButton" onclick="fullScreen('dialogAboutMePhoto','50%','6%','25%');"/>
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullAboutMePhoto" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullAboutMePhoto" class="fullButton" />
                     <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('aboutMe');"/>
                 </div>
             </div>
@@ -217,7 +217,7 @@
         <!-- END DIALOG CONTACT ME -->
 
         <!-- DIALOG SCATTOFISSO-->
-        <div id="dialogScattofissoPranzo" class="draggable dialog fontForScattofisso scattoFisso">
+        <div id="dialogScattofisso01" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Scattofisso - delivery app</span>
                 <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
@@ -227,7 +227,7 @@
             </div>
         </div>
 
-        <div id="dialogScattofissoPranzo2" class="draggable dialog fontForScattofisso scattoFisso">
+        <div id="dialogScattofisso02" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Scattofisso - delivery app</span>
                 <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
@@ -237,7 +237,7 @@
             </div>
         </div>
 
-        <div id="dialogScattofissoPranzo4" class="draggable dialog fontForScattofisso scattoFisso">
+        <div id="dialogScattofisso04" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Brucke - Pack</span>
                 <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
@@ -247,7 +247,7 @@
             </div>
         </div>
 
-        <div id="dialogScattofissoPranzo3" class="draggable dialog fontForScattofisso scattoFisso">
+        <div id="dialogScattofisso03" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Brucke - Pack</span>
                 <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
@@ -273,8 +273,8 @@
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Bates</span>
                 <div class="d-flex align-content-center">
-                    <img src="assets/_SVG UI/icon_nofull.svg" class="noFullButton hide" onclick="noFullScreen('dialogBates01', '28%', '5%', '10%');">
-                    <img src="assets/_SVG UI/icon_full.svg" class="fullButton" onclick="fullScreen('dialogBates01', '78%', '1%');">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullBates01" class="noFullButton" >
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullBates01" class="fullButton" >
                     <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
                 </div>
             </div>
@@ -402,10 +402,14 @@
             </div>
         </div>
 
-        <div id="dialogPranzo06" class="draggable dialog pranzo" style="background:#A53E3E">
+        <div id="dialogPranzo06" class="draggable dialog pranzo" style="background:#A53E3E; width: 100%;">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Pranzo<sup>3</sup> - Packs</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullPranzo06" class="noFullButton" >
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullPranzo06" class="fullButton" >
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1">
                 <div class="slideshow-container">
