@@ -83,18 +83,12 @@
                         </td>
                         <td>
                             <div class="m-3 px-3 py-2 onHover">
-                                <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Cartella 5</label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="m-3 px-3 py-2 onHover">
                                 <img id="scattofisso" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
                                 <label class="d-block textA">Scattofisso</label>
                             </div>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
                             <div class="m-3 px-3 py-2 onHover">
                                 <img id="bates" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
@@ -103,10 +97,11 @@
                         </td>
                         <td>
                             <div class="m-3 px-3 py-2 onHover">
-                                <img src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Cartella 8</label>
+                                <img id="teodora" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
+                                <label class="d-block textA">Teodora</label>
                             </div>
                         </td>
+                        
                     </tr>
                 </table>
             </div>
@@ -216,6 +211,89 @@
 
         <!-- END DIALOG CONTACT ME -->
 
+        <!-- DIALOG TEODORA -->
+
+        <div id="dialogTeodoraInterni" class="draggable dialog fontForScattofisso teodora">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1" >
+                <span class="textA">Teodora - Interni</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                <img src="./assets/Teodora/B1 (1).png" width="400px">
+            </div>
+        </div>
+
+        <div id="dialogTeodoraCover" class="draggable dialog fontForScattofisso teodora">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1" >
+                <span class="textA">Teodora 1924-1926 - Cover</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                <img src="./assets/Teodora/copertina.gif" width="565x">
+            </div>
+        </div>
+
+        <div id="dialogTeodoraDettagli" class="draggable dialog fontForScattofisso teodora">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1" >
+                <span class="textA">Teodora - Dettagli</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                <img src="./assets/Teodora/pagina centrale.png" width="400px">
+            </div>
+        </div>
+
+        <div id="dialogTeodoraText" class="draggable dialog fontForScattofisso teodora">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Teodora - Concept</span>
+                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                <p class="textA" style="padding: 30px;">
+                    TEODORA 1924-1926 e' un dizionario fittizio firmato da Livio <br/>Loncata(Acronimo di Italo Calvino)
+                    che racconta una <br/> storia basata sul racconto "Teodora" della raccolta "Le <br/> citta' invisibili" di Calvino.
+                    <br/><br/>
+                    Assieme ai testi vengono mostrati oggetti e fotografie <br/> a supporto della storia narrata.<br/><br/>
+                    La storia e i testi sono stati curati da Francesco Crotto <br/> e il design da Francesco Crotto, Matteo
+                    Evangelisti e <br/> Elisabetta Nascimbeni.
+                </p>
+            </div>
+        </div>
+
+        <div id="dialogTeodoraInterniSlides" class="draggable dialog teodora fontForScattofisso">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Teodora - Interni</span>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora);"/>
+                </div>
+            </div>
+            <div class="dialogContent ml-1 mr-1 mb-1">
+                <div class="slideshow-container">                  
+                    <div class="bruckeSlides1">
+                      <img src="./assets/Teodora/A1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="bruckeSlides1">
+                        <img src="./assets/Teodora/A2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="bruckeSlides1">
+                      <img src="./assets/Teodora/A3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="bruckeSlides1">
+                      <img src="./assets/Teodora/A4.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onClick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onClick="plusSlides(1, 2)">&#10095;</a>
+                  </div>
+            </div>
+            </div>
+        </div>
+        <!-- END DIALOG TEODORA -->
+
         <!-- DIALOG SCATTOFISSO-->
         <div id="dialogScattofisso01" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
@@ -241,6 +319,8 @@
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Brucke - Pack</span>
                 <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                <span class="textA">Scattofisso - Pack</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
                 <img src="./assets/Scattofisso/laboratorio.png" width="700px">
@@ -251,6 +331,8 @@
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Brucke - Pack</span>
                 <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                <span class="textA">Scattofisso - Pack</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
                 <img src="./assets/Scattofisso/dettaglio.png" width="700px">
@@ -261,6 +343,8 @@
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso">
                 <span class="textA">Brucke - Dettagli</span>
                 <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                <span class="textA">Scattofisso - Dettagli</span>
+                <img src="./assets/_SVG UI/WIN_CLOSE.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
                 <img src="./assets/Scattofisso/Scattofisso Presentazione2.jpg" width="350px">

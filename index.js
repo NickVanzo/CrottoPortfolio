@@ -15,6 +15,7 @@ var styleScattoFisso = null;
 var styleBates = null;
 var stylePranzo = null;
 var styleBrucke = null;
+var styleTeodora = null;
 var styleArcher = null;
 
 //prende tutti gli elementi con class "draggable" e li rende draggable()
@@ -82,7 +83,7 @@ $(".folder").dblclick(function () {
             break;
 
         case "works":
-            styleWorks = { width: "42%", top: "10%", left: "40%" };
+            styleWorks = { width: "44%", top: "10%", left: "40%" };
             openDialog("#dialogWorks", 0, styleWorks);
             break;
 
@@ -112,12 +113,38 @@ $(".folder").dblclick(function () {
                 5: { width: "35%", top: "7%", left: "50%" }
             };
 
-            openDialog("#dialogBates01", 0, styleBates[0]);
-            openDialog("#dialogBates06", 500, styleBates[1]);
-            openDialog("#dialogBates02", 1000, styleBates[2]);
-            openDialog("#dialogBates03", 1500, styleBates[3]);
-            openDialog("#dialogBates04", 2000, styleBates[4]);
-            openDialog("#dialogBates05", 2500, styleBates[5]);
+            case "archer":
+                dialogStyle.width = "42.3%";
+                openDialog("#dialogArcherSpeciment", this.id, 0, "10%", "5%");
+                dialogStyle.width = "14.3%";
+                openDialog("#dialogArcherIconSistem", this.id, 0, "60%", "70%");
+                dialogStyle.width = "30%";
+                openDialog("#dialogInfografica", this.id, 0, "15%", "60%");
+                dialogStyle.width = "32.15%";
+                openDialog("#dialogIconSistemPerUnaBiblioteca", this.id, 0, "60%", "35%");
+
+            case "teodora":
+                styleTeodora = {
+                    0: { width: "28.5%", top: "10%", left: "55%"},
+                    1: { width: "40%", top: "5%", left: "25%"},
+                    2: { width: "28.5%", top: "50%", left: "5%%"},
+                    3: { width: "35%", top: "60%", left: "30%"},
+                    4: { width: "30%", top: "40%", left: "55%" }
+                };
+
+                openDialog("#dialogTeodoraInterni", 0, styleTeodora[0]);
+                openDialog("#dialogTeodoraCover", 0, styleTeodora[1]);
+                openDialog("#dialogTeodoraDettagli", 0, styleTeodora[2]);
+                openDialog("#dialogTeodoraText", 0, styleTeodora[3]);
+                openDialog("#dialogTeodoraInterni2", 0, styleTeodora[4]);
+                break;
+            case "bates":
+                openDialog("#dialogBates01", 0, styleBates[0]);
+                openDialog("#dialogBates06", 500, styleBates[1]);
+                openDialog("#dialogBates02", 1000, styleBates[2]);
+                openDialog("#dialogBates03", 1500, styleBates[3]);
+                openDialog("#dialogBates04", 2000, styleBates[4]);
+                openDialog("#dialogBates05", 2500, styleBates[5]);
             break;
 
         case "pranzo":
