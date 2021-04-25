@@ -182,6 +182,16 @@
   bottom: -100px;
   left: -120px;
   width: 25%;
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(-359deg);
+  }
 }
 
 /* STYLE SLIDESHOW */

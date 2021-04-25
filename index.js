@@ -4,7 +4,6 @@ var dialogStyle = {
     "top": "50%",
     "left": "50%"
 }
-var angle = 0;
 
 /* New Style x animation fullscreen / noFullscreen */
 var styleContactMe = null;
@@ -25,9 +24,6 @@ $(".draggable").draggable();
 $(window).on("load", function () {
     //reset di tutti i dialog
     $(".dialog").css("z-index", 0)
-
-    //rotazione del logo
-    rotateLogo(angle);
 });
 
 function openDialog(dialogName, delay, { width, top, left }) {
@@ -113,38 +109,29 @@ $(".folder").dblclick(function () {
                 5: { width: "35%", top: "7%", left: "50%" }
             };
 
-            case "archer":
-                dialogStyle.width = "42.3%";
-                openDialog("#dialogArcherSpeciment", this.id, 0, "10%", "5%");
-                dialogStyle.width = "14.3%";
-                openDialog("#dialogArcherIconSistem", this.id, 0, "60%", "70%");
-                dialogStyle.width = "30%";
-                openDialog("#dialogInfografica", this.id, 0, "15%", "60%");
-                dialogStyle.width = "32.15%";
-                openDialog("#dialogIconSistemPerUnaBiblioteca", this.id, 0, "60%", "35%");
+        case "teodora":
+            styleTeodora = {
+                0: { width: "28.5%", top: "10%", left: "55%" },
+                1: { width: "40%", top: "5%", left: "25%" },
+                2: { width: "28.5%", top: "50%", left: "5%%" },
+                3: { width: "35%", top: "60%", left: "30%" },
+                4: { width: "30%", top: "40%", left: "55%" }
+            };
 
-            case "teodora":
-                styleTeodora = {
-                    0: { width: "28.5%", top: "10%", left: "55%"},
-                    1: { width: "40%", top: "5%", left: "25%"},
-                    2: { width: "28.5%", top: "50%", left: "5%%"},
-                    3: { width: "35%", top: "60%", left: "30%"},
-                    4: { width: "30%", top: "40%", left: "55%" }
-                };
+            openDialog("#dialogTeodoraInterni", 0, styleTeodora[0]);
+            openDialog("#dialogTeodoraCover", 500, styleTeodora[1]);
+            openDialog("#dialogTeodoraDettagli", 1000, styleTeodora[2]);
+            openDialog("#dialogTeodoraText", 1500, styleTeodora[3]);
+            openDialog("#dialogTeodoraInterni2", 2000, styleTeodora[4]);
+            break;
 
-                openDialog("#dialogTeodoraInterni", 0, styleTeodora[0]);
-                openDialog("#dialogTeodoraCover", 0, styleTeodora[1]);
-                openDialog("#dialogTeodoraDettagli", 0, styleTeodora[2]);
-                openDialog("#dialogTeodoraText", 0, styleTeodora[3]);
-                openDialog("#dialogTeodoraInterni2", 0, styleTeodora[4]);
-                break;
-            case "bates":
-                openDialog("#dialogBates01", 0, styleBates[0]);
-                openDialog("#dialogBates06", 500, styleBates[1]);
-                openDialog("#dialogBates02", 1000, styleBates[2]);
-                openDialog("#dialogBates03", 1500, styleBates[3]);
-                openDialog("#dialogBates04", 2000, styleBates[4]);
-                openDialog("#dialogBates05", 2500, styleBates[5]);
+        case "bates":
+            openDialog("#dialogBates01", 0, styleBates[0]);
+            openDialog("#dialogBates06", 500, styleBates[1]);
+            openDialog("#dialogBates02", 1000, styleBates[2]);
+            openDialog("#dialogBates03", 1500, styleBates[3]);
+            openDialog("#dialogBates04", 2000, styleBates[4]);
+            openDialog("#dialogBates05", 2500, styleBates[5]);
             break;
 
         case "pranzo":
@@ -197,6 +184,8 @@ $(".folder").dblclick(function () {
             openDialog("#dialogArcherIconSistem", 500, styleArcher[1]);
             openDialog("#dialogInfografica", 1000, styleArcher[2]);
             openDialog("#dialogIconSistemPerUnaBiblioteca", 1500, styleArcher[3]);
+            break;
+
         default:
             break;
     }
@@ -360,14 +349,8 @@ function closeWindowsOfProject(projectID) {
     $("." + projectID).fadeOut(500);
 }
 
-function rotateLogo(angle) {
-    setInterval(function () {
-        document.getElementById("logo").style.transform = "rotate(" + (angle - 0.2) + "deg)";
-        angle -= 0.2;
-    }, 10);
-}
-
 /* SLIDESHOW JS */
+//slideIndex ==> contiene l'indice delle immagini da far girare (es. pranzoSlides1 corrisponde alla posizione 0, incrementando l0indice in posizione 0 faremo scorrere le slides di pranzo1)
 var slideIndex = [1, 1, 1, 1];
 var slideId = ["pranzoSlides1", "pranzoSlides2", "bruckeSlides1", "bruckeSlides2"]
 showSlides(1, 0);
@@ -381,7 +364,8 @@ function plusSlides(n, no) {
 
 function showSlides(n, no) {
     var i;
-    var x = document.getElementsByClassName(slideId[no]);
+    //var x = document.getElementsByClassName(slideId[no]);
+    var x = $("."+slideId[no]);
     if (n > x.length) { slideIndex[no] = 1 }
     if (n < 1) { slideIndex[no] = x.length }
     for (i = 0; i < x.length; i++) {
