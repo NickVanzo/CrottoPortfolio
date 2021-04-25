@@ -109,6 +109,14 @@ $(".folder").dblclick(function () {
                 5: { width: "35%", top: "7%", left: "50%" }
             };
 
+            openDialog("#dialogBates01", 0, styleBates[0]);
+            openDialog("#dialogBates06", 500, styleBates[1]);
+            openDialog("#dialogBates02", 1000, styleBates[2]);
+            openDialog("#dialogBates03", 1500, styleBates[3]);
+            openDialog("#dialogBates04", 2000, styleBates[4]);
+            openDialog("#dialogBates05", 2500, styleBates[5]);
+        break;
+
         case "teodora":
             styleTeodora = {
                 0: { width: "28.5%", top: "10%", left: "55%" },
@@ -125,15 +133,6 @@ $(".folder").dblclick(function () {
             openDialog("#dialogTeodoraText", 1500, styleTeodora[3]);
             openDialog("#dialogTeodoraInterni2", 2000, styleTeodora[4]);
             openDialog("#dialogTeodoraInterniSlides", 2500, styleTeodora[5]);
-            break;
-
-        case "bates":
-            openDialog("#dialogBates01", 0, styleBates[0]);
-            openDialog("#dialogBates06", 500, styleBates[1]);
-            openDialog("#dialogBates02", 1000, styleBates[2]);
-            openDialog("#dialogBates03", 1500, styleBates[3]);
-            openDialog("#dialogBates04", 2000, styleBates[4]);
-            openDialog("#dialogBates05", 2500, styleBates[5]);
             break;
 
         case "pranzo":
@@ -215,16 +214,32 @@ $(".fullButton").on("click", function () {
             style = { width: "78%", top: "1%", left: "10%" };
             break;
 
+        case "fullBates02":
+            projectID = "#dialogBates02";
+            style = { width: "50%", top: "1%", left: "10%" };
+            break;
+
+        case "fullBates03":
+            projectID = "#dialogBates03";
+            style = { width: "70%", top: "1%", left: "15%" };
+            break;
+
+        case "fullBates04":
+            projectID = "#dialogBates04";
+            style = { width: "95%", top: "3%", left: "2.5%" };
+            break;
+
+        case "fullBates05":
+            projectID = "#dialogBates05";
+            style = { width: "70%", top: "1%", left: "15%" };
+            break;
+
         case "fullPranzo06":
             projectID = "#dialogPranzo06";
             style = { width: "75%", top: "1%", left: "14%" };
             break;
 
-        case "fullPranzo07":
-            projectID = "#dialogPranzo07";
-            style = { width: "52%", top: "1%", left: "22%" };
-            break;
-
+        
         case "fullBrucke02":
             projectID = "#dialogBrucke02";
             style = { width: "80%", top: "1%", left: "10%" };
@@ -249,6 +264,80 @@ $(".fullButton").on("click", function () {
             projectID = "#dialogBruckeG2";
             style = { width: "52%", top: "1%", left: "25%" };
             break;
+        
+        case "fullTeodora01":
+            projectID = "#dialogTeodoraInterni";
+            style = { width: "75%", top: "1%", left: "10%" };
+            break;
+
+        case "fullTeodora02":
+            projectID = "#dialogTeodoraCover";
+            style = { width: "65%", top: "1%", left: "15%" };
+            break;
+
+        case "fullTeodora03":
+            projectID = "#dialogTeodoraDettagli";
+            style = { width: "70%", top: "1%", left: "15%" };
+            break;
+
+        case "fullTeodora04":
+            projectID = "#dialogTeodoraText";
+            style = { width: "70%", top: "1%", left: "15%" };
+            break;
+
+        case "fullScatto01":
+            projectID = "#dialogScattofisso01";
+            style = { width: "70%", top: "1%", left: "15%" };
+            break;
+
+        case "fullScatto04":
+            projectID = "#dialogScattofisso04";
+            style = { width: "50%", top: "1%", left: "15%" };
+            break;
+
+        case "fullScattoPhoto":
+            projectID = "#dialogScattofissoPhoto";
+            style = { width: "70%", top: "1%", left: "15%" };
+
+        case "fullarcher01":
+            projectID = "#dialogArcherSpeciment";
+            style = { width: "70%", top: "1%", left: "15%" };
+            break;
+
+        case "fullarcher02":
+            projectID = "#dialogInfografica";
+            style = { width: "70%", top: "1%", left: "15%" };
+            break;
+
+        case "fullarcher03":
+            projectID = "#dialogArcherIconSistem";
+            style = { width: "50%", top: "1%", left: "15%" }
+            break;
+
+        case "fullarcher04":
+            projectID = "#dialogIconSistemPerUnaBiblioteca";
+            style = { width: "80%", top: "1%", left: "15%" };
+            break;
+
+        case "fullPranzo03":
+            projectID = "#dialogPranzo03";
+            style = { width: "90%", top: "1%", left: "5%" };
+            break;
+
+        case "fullPranzo05":
+            projectID = "#dialogPranzo05";
+            style = { width: "90%", top: "1%", left: "5%" };
+            break;
+
+        case "fullPranzo06":
+            projectID = "#dialogPranzo06";
+            style = { width: "90%", top: "1%", left: "5%" };
+            break;
+
+            case "fullPranzo07":
+                projectID = "#dialogPranzo07";
+                style = { width: "52%", top: "1%", left: "22%" };
+                break;    
 
         default:
             break;
@@ -274,14 +363,79 @@ $(".noFullButton").on("click", function () {
             style = styleAboutMePhoto;
             break;
 
+        case "noFullarcher01":
+            projectID = "#dialogArcherSpeciment";
+            style = styleArcher[0];
+            break;
+
+        case "noFullarcher02":
+            projectID = "#dialogInfografica";
+            style = styleArcher[2];
+            break;
+
+        case "noFullarcher03":
+            projectID = "#dialogArcherIconSistem";
+            style = styleArcher[1];
+            break;
+
+        case "noFullarcher04":
+            projectID = "#dialogIconSistemPerUnaBiblioteca";
+            style = styleArcher[3];
+            break;
+
+        case "noFullScatto04":
+            projectID = "#dialogScatto04";
+            style = styleScattoFisso[4];
+            break;
+
+        case "noFullScattoPhoto":
+            projectID = "#dialogScattofissoPhoto";
+            style = styleScattoFisso[4];
+            break;
+
         case "noFullBates01":
             projectID = "#dialogBates01";
             style = styleBates[0];
             break;
 
+        case "noFullBates02":
+            projectID = "#dialogBates02";
+            style = styleBates[1];
+            break;
+
+        case "noFullBates03":
+            projectID = "#dialogBates03";
+            style = styleBates[3];
+            break;
+
+        case "noFullBates04":
+            projectID = "#dialogBates04";
+            style = styleBates[4];
+            break;
+
+        case "noFullBates05":
+            projectID = "#dialogBates05";
+            style = styleBates[5];
+            break;
+
         case "noFullPranzo06":
             projectID = "#dialogPranzo06";
             style = stylePranzo[5];
+            break;
+
+        case "noFullpranzo03":
+            projectID = "#dialogPranzo03";
+            style = stylePranzo[1];
+            break;
+
+        case "noFullpranzo05":
+            projectID = "#dialogPranzo05";
+            style = stylePranzo[2];
+            break;
+
+        case "noFullPranzo07":
+            projectID = "#dialogPranzo07";
+            style = stylePranzo[6];
             break;
 
         case "noFullBrucke02":
@@ -307,6 +461,26 @@ $(".noFullButton").on("click", function () {
         case "noFullBruckeG2":
             projectID = "#dialogBruckeG2";
             style = styleBrucke[5];
+            break;
+
+        case "noFullTeodora01":
+            projectID = "#dialogTeodoraInterni";
+            style = styleTeodora[0];
+            break;
+
+        case "noFullTeodora02":
+            projectID = "#dialogTeodoraCover";
+            style = styleTeodora[1];
+            break;
+
+        case "noFullTeodora03":
+            projectID = "#dialogTeodoraDettagli";
+            style = styleTeodora[2];
+            break;
+
+        case "noFullTeodora04":
+            projectID = "#dialogTeodoraText";
+            style = styleTeodora[3];
             break;
 
         default:

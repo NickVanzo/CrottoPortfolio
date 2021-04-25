@@ -15,6 +15,9 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8d28aef0fa.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -135,40 +138,56 @@
         <div id="dialogArcherSpeciment" class="draggable dialog grad01 archer">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Speciment - Archer</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullarcher01" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullarcher01" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Archer/archer_speciment.gif" width="600px">
+                <img src="./assets/Archer/archer_speciment.gif" width="100%">
             </div>
         </div>
 
         <div id="dialogInfografica" class="draggable dialog grad01 archer">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Infografica</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullarcher02" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullarcher02" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Archer/diaspora siriana.jpg" width="423x">
+                <img src="./assets/Archer/diaspora siriana.jpg" width="100%">
             </div>
         </div>
 
         <div id="dialogArcherIconSistem" class="draggable dialog grad01 archer">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Icon sistem</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullarcher03" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullarcher03" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Archer/icone-viola.gif" width="197px">
+                <img src="./assets/Archer/icone-viola.gif" width="100%">
             </div>
         </div>
 
         <div id="dialogIconSistemPerUnaBiblioteca" class="draggable dialog grad01 archer">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Icon sistem per una biblioteca</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullarcher04" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullarcher04" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Archer/icone-color.gif" width="455px">
+                <img src="./assets/Archer/icone-color.gif" width="100%">
             </div>
         </div>
 
@@ -216,37 +235,51 @@
         <div id="dialogTeodoraInterni" class="draggable dialog fontForScattofisso teodora">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1" >
                 <span class="textA">Teodora - Interni</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullTeodora01" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullTeodora01" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Teodora/B1 (1).png" width="400px">
+                <img src="./assets/Teodora/B1 (1).png" width="100%">
             </div>
         </div>
 
         <div id="dialogTeodoraCover" class="draggable dialog fontForScattofisso teodora">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1" >
                 <span class="textA">Teodora 1924-1926 - Cover</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
-            </div>
+                    <div class="d-flex align-content-center">
+                        <img src="assets/_SVG UI/icon_nofull.svg" id="noFullTeodora02" class="noFullButton" />
+                        <img src="assets/_SVG UI/icon_full.svg" id="fullTeodora02" class="fullButton" />
+                        <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>    
+                    </div>
+                </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Teodora/copertina.gif" width="565x">
+                <img src="./assets/Teodora/copertina.gif" width="100%">
             </div>
         </div>
 
         <div id="dialogTeodoraDettagli" class="draggable dialog fontForScattofisso teodora">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1" >
                 <span class="textA">Teodora - Dettagli</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullTeodora03" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullTeodora03" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Teodora/pagina centrale.png" width="400px">
+                <img src="./assets/Teodora/pagina centrale.png" width="100%">
             </div>
         </div>
 
         <div id="dialogTeodoraText" class="draggable dialog fontForScattofisso teodora">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Teodora - Concept</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+                <div class="d-flex align-content-center">
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('teodora');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
                 <p class="textA" style="padding: 30px;">
@@ -300,10 +333,14 @@
         <div id="dialogScattofisso01" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Scattofisso - delivery app</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                <div class="d-flex align-content-center">
+                    <!-- <img src="assets/_SVG UI/icon_nofull.svg" id="noFullScatto01" class="noFullButton" >
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullScatto01" class="fullButton" > -->
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
-                <img src="./assets/Scattofisso/Laboratorio mobile.png" width="300px">
+                <img src="./assets/Scattofisso/Laboratorio mobile.png" width="100%">
             </div>
         </div>
 
@@ -320,10 +357,15 @@
         <div id="dialogScattofisso04" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso" >
                 <span class="textA">Scattofisso - Pack</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                <div class="d-flex align-content-center">
+                    <!--
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullScatto04" class="noFullButton" >
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullScatto04" class="fullButton" > -->
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" style="overflow-y: scroll; height: 400px;">
-                <img src="./assets/Scattofisso/laboratorio.png" width="700px">
+                <img src="./assets/Scattofisso/laboratorio.png" width="100%">
             </div>
         </div>
 
@@ -340,10 +382,14 @@
         <div id="dialogScattofissoPhoto" class="draggable dialog fontForScattofisso scattoFisso">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1 fontForScattofisso">
                 <span class="textA">Scattofisso - Dettagli</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullScattoPhoto" class="noFullButton" >
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullScattoPhoto" class="fullButton" >
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('scattoFisso');"/>
+                </div>
             </div>
             <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                <img src="./assets/Scattofisso/Scattofisso Presentazione2.jpg" width="350px">
+                <img src="./assets/Scattofisso/Scattofisso Presentazione2.jpg" width="100%">
             </div>
         </div>
 
@@ -366,7 +412,11 @@
         <div id="dialogBates02" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Bates</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                <div class="d-flex align-content-center">
+                    <!-- <img src="assets/_SVG UI/icon_nofull.svg" id="noFullBates02" class="noFullButton">
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullBates02" class="fullButton" > -->
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_keys.jpg" alt="Bates Key" width="100%"/>
@@ -376,7 +426,11 @@
         <div id="dialogBates03" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Bates</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullBates03" class="noFullButton">
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullBates03" class="fullButton" >
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_poster.jpg" alt="Bates Poster" width="100%"/>
@@ -386,7 +440,11 @@
         <div id="dialogBates04" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Bates</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullBates04" class="noFullButton">
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullBates04" class="fullButton" >
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <img src="./assets/Bates/Bates_schermo.jpg" alt="Bates Schermo" width="100%"/>
@@ -396,7 +454,11 @@
         <div id="dialogBates05" class="draggable dialog bates" style="background:#EE4783">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Bates</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullBates05" class="noFullButton">
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullBates05" class="fullButton" >
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('bates');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 dark textB">
                 <video width="100%" controls>
@@ -452,7 +514,11 @@
         <div id="dialogPranzo03" class="draggable dialog pranzo" style="background:#A53E3E">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Pranzo<sup>3</sup> - Visual</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+                <div class="d-flex align-content-center"> 
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullpranzo03" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullPranzo03" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1">
                 <img src="./assets/Pranzo/gif_txtr.gif" alt="Pranzo Visual" width="100%"> 
@@ -475,7 +541,11 @@
         <div id="dialogPranzo05" class="draggable dialog pranzo" style="background:#A53E3E">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Pranzo<sup>3</sup> - Delivery App</span>
-                <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+                <div class="d-flex align-content-center">
+                    <!-- <img src="assets/_SVG UI/icon_nofull.svg" id="noFullpranzo05" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullPranzo05" class="fullButton" /> -->
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('pranzo');"/>
+                </div>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1">
                 <img src="./assets/Pranzo/gif_mobile.gif" alt="Pranzo Visual" width="100%"> 
