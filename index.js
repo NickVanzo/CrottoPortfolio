@@ -115,7 +115,8 @@ $(".folder").dblclick(function () {
                 1: { width: "40%", top: "5%", left: "25%" },
                 2: { width: "28.5%", top: "50%", left: "5%%" },
                 3: { width: "35%", top: "60%", left: "30%" },
-                4: { width: "30%", top: "40%", left: "55%" }
+                4: { width: "30%", top: "40%", left: "55%" },
+                5: { width: "30%", top: "40%", left: "55%" }
             };
 
             openDialog("#dialogTeodoraInterni", 0, styleTeodora[0]);
@@ -123,6 +124,7 @@ $(".folder").dblclick(function () {
             openDialog("#dialogTeodoraDettagli", 1000, styleTeodora[2]);
             openDialog("#dialogTeodoraText", 1500, styleTeodora[3]);
             openDialog("#dialogTeodoraInterni2", 2000, styleTeodora[4]);
+            openDialog("#dialogTeodoraInterniSlides", 2500, styleTeodora[5]);
             break;
 
         case "bates":
@@ -351,15 +353,16 @@ function closeWindowsOfProject(projectID) {
 
 /* SLIDESHOW JS */
 //slideIndex ==> contiene l'indice delle immagini da far girare (es. pranzoSlides1 corrisponde alla posizione 0, incrementando l0indice in posizione 0 faremo scorrere le slides di pranzo1)
-var slideIndex = [1, 1, 1, 1];
-var slideId = ["pranzoSlides1", "pranzoSlides2", "bruckeSlides1", "bruckeSlides2"]
+var slideIndex = [1, 1, 1, 1, 1];
+var slideId = ["pranzoSlides1", "pranzoSlides2", "bruckeSlides1", "bruckeSlides2", "teodoraSlides1"]
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
 showSlides(1, 3);
+showSlides(1, 4);
 
-function plusSlides(n, no) {
-    showSlides(slideIndex[no] += n, no);
+function plusSlides(n, nextSlideIndex) {
+    showSlides(slideIndex[nextSlideIndex] += n, nextSlideIndex);
 }
 
 function showSlides(n, no) {
