@@ -32,7 +32,7 @@ function openDialog(dialogName, delay, { width, top, left }) {
     dialogStyle.top = top;
     dialogStyle.left = left;
     //mostro il dialog
-    $(dialogName).delay(delay).fadeIn(500);
+    $(dialogName).delay(delay/2).fadeIn(0);
 
     //aggiungo il css
     $(dialogName).css(dialogStyle);
@@ -65,7 +65,7 @@ $(".folder").dblclick(function () {
             break;
 
         case "contact_me":
-            styleContactMe = { width: "30%", top: "35%", left: "35%" };
+            styleContactMe = { width: "40%", top: "35%", left: "35%" };
             openDialog("#dialogContactMe", 0, styleContactMe);
             //dialogStyle.width = "30%";
             //openDialog("#dialogContactMe", 0, "35%", "35%");
@@ -79,7 +79,7 @@ $(".folder").dblclick(function () {
             break;
 
         case "works":
-            styleWorks = { width: "44%", top: "10%", left: "40%" };
+            styleWorks = { width: "900px", top: "10%", left: "35%" };
             openDialog("#dialogWorks", 0, styleWorks);
             break;
 

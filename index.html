@@ -33,29 +33,29 @@
     <div class="container-fluid position-relative ">
 
         <div id="chiudiTutto" class="grad01 textA d-flex align-items-center justify-content-center">
-            <span>Chiudi tutto &times;</span> 
+            <span class="textA">Chiudi tutto &times;</span> 
         </div>
         
 
         <!-- Start Column -->
         <div id="elementWorks" class="text-center draggable onHover">
-            <img class="folder mx-3 mt-2" id="works" src="./assets/_SVG UI/ICO_FOLDER.svg" width="60" height="60">
-            <label class="d-block textA" for="works">Works</label>
+            <img class="folder mx-3 mt-2 folderDimenions" id="works" src="./assets/_SVG UI/ICO_FOLDER.svg">
+            <label class="distanceFromFolder d-block textA" for="works">Works</label>
         </div>
 
         <div id="elementAboutMe" class="text-center draggable onHover ui-widget-content">
-            <img class="folder mx-3 mt-2" id="about_me" src="./assets/_SVG UI/ICO_TXT.svg" width="60" height="60">
-            <label class="d-block textA" for="about_me">About Me</label>
+            <img class="folder mx-3 mt-2 folderDimenions" id="about_me" src="./assets/_SVG UI/ICO_TXT.svg">
+            <label class="distanceFromFolder d-block textA" for="about_me">About Me</label>
         </div>
 
         <div id="elementContactMe" class="text-center draggable onHover">
-            <img class="folder mx-3 mt-2" id="contact_me" src="./assets/_SVG UI/ICO_TXT.svg" width="60" height="60">
-            <label class="d-block textA" for="contact_me">Contact Me</label>
+            <img class="folder mx-3 mt-2" id="contact_me" src="./assets/_SVG UI/ICO_TXT.svg" width="58px" height="82px">
+            <label class="distanceFromFolder d-block textA" for="contact_me">Contact Me</label>
         </div>
 
         <div id="elementRandomStuff" class="text-center draggable onHover">
-            <img class="folder mx-3 mt-2" id="randomStuff" src="./assets/_SVG UI/ICO_EXE.svg" width="60" height="60">
-            <label class="d-block textA" for="randomStuff">Random stuff</label>
+            <img class="folder mx-3 mt-2 " id="randomStuff" src="./assets/_SVG UI/ICO_EXE.svg" width="58px" height="82px">
+            <label class="distanceFromFolder d-block textA" for="randomStuff">Random stuff</label>
         </div>
 
         <!-- DIALOG WORKS FOLDER -->
@@ -67,49 +67,57 @@
             </div>
             
             <div class="dialogContent d-flex flex-wrap justify-content-start text-center ml-1 mr-1 mb-1 dark">
-                <table>
-                    <tr>
-                        <td>
-                            <div class="m-3 px-3 py-2 onHover">
-                                <img id="pranzo" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Pranzo<sup>3</sup></label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="m-3 px-3 py-2 onHover">
-                                <img id="brucke" class="folder mx-3 mt-2" src=" assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Brucke <br/> (Megazine)</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="m-3 px-3 py-2 onHover">
-                                <img id="archer" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Archer</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="m-3 px-3 py-2 onHover">
-                                <img id="scattofisso" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Scattofisso</label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="m-3 px-3 py-2 onHover">
-                                <img id="bates" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Bates Festival <br/> (Branding)</label>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="m-3 px-3 py-2 onHover">
-                                <img id="teodora" class="folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" width="60" height="60" />
-                                <label class="d-block textA">Teodora</label>
-                            </div>
-                        </td>
-                        
-                    </tr>
-                </table>
+                <div style="padding-top: 65px; padding-left: 45px; padding-right: 45px; padding-bottom: 100px;">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="m-3 px-3 py-2 onHover">
+                                    <img id="pranzo" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                                    <label class="distanceFromFolder d-block textA">Pranzo<sup>3</sup></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="m-3 px-3 py-2 onHover">
+                                    <img id="brucke" class="folderDimenions folder mx-3 mt-2" src=" assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella"  />
+                                    <label class="distanceFromFolder d-block textA">Brucke <br/> (Megazine)</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="m-3 px-3 py-2 onHover">
+                                    <img id="scattofisso" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella" />
+                                    <label class="distanceFromFolder d-block textA">Scattofisso (UI)</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="m-3 px-3 py-2 onHover">
+                                    <img id="archer" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella"/>
+                                    <label class="distanceFromFolder d-block textA">Prologo x Still<br /> (Videographic))</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="m-3 px-3 py-2 onHover">
+                                    <img id="teodora" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella"  />
+                                    <label class="distanceFromFolder d-block textA">Teodora<br/> (Editorial)</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="m-3 px-3 py-2 onHover">
+                                    <img id="bates" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella"  />
+                                    <label class="distanceFromFolder d-block textA">Bates Festival <br/> (Branding)</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="m-3 px-3 py-2 onHover">
+                                    <img id="archer" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella"/>
+                                    <label class="distanceFromFolder d-block textA">Other stuff</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
             </div>
         </div>
 
@@ -122,8 +130,8 @@
                     <span class="textA">About me </span>
                     <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('aboutMe');"/>
                 </div>
-                <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
-                    <p class="textB" style="padding: 30px;">
+                <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark" >
+                    <p class="textB" style="padding-top: 65px; padding-left: 45px; padding-bottom: 100px; padding-right: 45px;">
                         Ciao<br /><br />Mi chiamo <span class="textGrad01">Francesco Crotto</span>, sono un Graphic designer
                         e vivo a Torino, in
                         Italia.<br /><br />
@@ -222,13 +230,16 @@
                 <img src="./assets/_SVG UI/icon_close.svg"  class="closeButton" onClick="closeWindowsOfProject('contactMe');"/>
             </div>
             <div class="dialogContent ml-1 mr-1 mb-1 p-3 px-5 dark textB">
-                <p>Se mi cerchi mi trovi qui : </p><br>
+                <p style="padding-top: 35px; padding-left: 45px; padding-right: 45px;">Se mi cerchi mi trovi qui : </p><br>
                 <!-- rel="noopener noreferrer" : to prevent tabnabbing -->
-                <a class="textGrad01" href="mailto:francesco.cr8@gmail.com" target="_blank" rel="noopener noreferrer" title="Scrivimi!"><i class="fas fa-envelope"></i> Email</a>
-                <br> <a class="textGrad01" href="https://www.behance.net/francescocrotto" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance-square"></i> Behance</a>
-                <br> <a class="textGrad01" href="https://www.linkedin.com/in/francesco-crotto-510a42209/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <br> <a class="textGrad01" href="https://www.instagram.com/still_notbad/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i> Instagram</a>
-            </div>
+                <div style="padding-left: 45px; padding-right: 45px; padding-bottom: 35px;">
+                    <a class="textGrad01" href="mailto:francesco.cr8@gmail.com" target="_blank" rel="noopener noreferrer" title="Scrivimi!">
+                         Email</a>
+                    <br> <a class="textGrad01" href="https://www.behance.net/francescocrotto" target="_blank" rel="noopener noreferrer">Behance</a>
+                    <br> <a class="textGrad01" href="https://www.linkedin.com/in/francesco-crotto-510a42209/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <br> <a class="textGrad01" href="https://www.instagram.com/still_notbad/" target="_blank" rel="noopener noreferrer"> Instagram</a>    
+                </div>
+                </div>
         </div>
 
         <!-- END DIALOG CONTACT ME -->
