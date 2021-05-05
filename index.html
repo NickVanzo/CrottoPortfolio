@@ -90,7 +90,7 @@
                             </td>
                             <td>
                                 <div class="m-3 px-3 py-2 onHover">
-                                    <img id="archer" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella"/>
+                                    <img id="video" class="folderDimenions folder mx-3 mt-2" src="assets/_SVG UI/ICO_FOLDER.svg" alt="Cartella"/>
                                     <label class="distanceFromFolder d-block textA">Prologo x Still<br /> (Videographic))</label>
                                 </div>
                             </td>
@@ -149,7 +149,7 @@
         <div id="dialogArcherSpeciment" class="draggable dialog grad01 archer">
             <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
                 <span class="textA">Speciment - Archer</span>
-                <div class="d-flex align-content-center">
+                <div class="d-flex align-content-center" style="padding-right: 3px;">
                     <img src="assets/_SVG UI/icon_nofull.svg" id="noFullarcher01" class="noFullButton" />
                     <img src="assets/_SVG UI/icon_full.svg" id="fullarcher01" class="fullButton" />
                     <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onclick="closeWindowsOfProject('archer');"/>
@@ -624,6 +624,22 @@
             </div>
         </div>
         <!-- END DIALOG PRANZO 3 -->
+
+        <!-- DIALOGS VIDEO -->
+
+        <div id="dialogVideo" class="draggable dialog video" style="background:#343a90">
+            <div class="dialogHeader d-flex justify-content-between align-items-center pl-2 pr-1">
+                <span class="textA">Prologo X Still</span>
+                <div class="d-flex align-content-center">
+                    <img src="assets/_SVG UI/icon_nofull.svg" id="noFullVideo" class="noFullButton" />
+                    <img src="assets/_SVG UI/icon_full.svg" id="fullVideo" class="fullButton" />
+                    <img src="./assets/_SVG UI/icon_close.svg" class="closeButton" onClick="closeWindowsOfProject('video');"/>
+                </div>
+            </div>
+            <div class="dialogContent d-flex flex-wrap justify-content-start ml-1 mr-1 mb-1 dark">
+                <iframe style="width: 600px; height: 400px;" src="https://youtube.com/embed/puz6jWiawA8"></iframe>
+            </div>
+        </div>
 
         <!-- DIALOGS Brukes -->
 

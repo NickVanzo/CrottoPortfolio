@@ -16,6 +16,7 @@ var stylePranzo = null;
 var styleBrucke = null;
 var styleTeodora = null;
 var styleArcher = null;
+var styleVideo = null;
 
 //prende tutti gli elementi con class "draggable" e li rende draggable()
 $(".draggable").draggable();
@@ -60,6 +61,12 @@ $(".folder").dblclick(function () {
     dialogStyle.width = "25%";
 
     switch (this.id) {
+
+        case "video":
+            styleVideo = { width: "40%", top: "1%", left: "1%" };
+            openDialog("#dialogVideo", 0, styleVideo);
+            break;
+
         case "randomStuff":
             openDialog("#dialogRandomStuff", 0);
             break;
@@ -67,8 +74,6 @@ $(".folder").dblclick(function () {
         case "contact_me":
             styleContactMe = { width: "40%", top: "35%", left: "35%" };
             openDialog("#dialogContactMe", 0, styleContactMe);
-            //dialogStyle.width = "30%";
-            //openDialog("#dialogContactMe", 0, "35%", "35%");
             break;
 
         case "about_me":
@@ -202,8 +207,15 @@ $(".fullButton").on("click", function () {
     $(this.parentElement.children[0]).css("display", "block");
     let projectID = "";
     let style;
+    
 
     switch (this.id) {
+
+        case "fullVideo":
+            projectID = "#dialogVideo";
+            style = { width: "80%", top: "1%", left: "23%" };
+            break;
+
         case "fullAboutMePhoto":
             projectID = "#dialogAboutMePhoto";
             style = { width: "53%", top: "1%", left: "23%" };
@@ -358,6 +370,12 @@ $(".noFullButton").on("click", function () {
     let style;
 
     switch (this.id) {
+
+        case "noFullVideo":
+            projectID = "#dialogVideo";
+            style = styleVideo;
+            break;
+
         case "noFullAboutMePhoto":
             projectID = "#dialogAboutMePhoto";
             style = styleAboutMePhoto;
@@ -522,6 +540,7 @@ $("#chiudiTutto").on("click", function () {
 });
 
 function closeWindowsOfProject(projectID) {
+    
     $("." + projectID).fadeOut(500);
 }
 
