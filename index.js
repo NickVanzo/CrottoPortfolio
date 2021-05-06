@@ -33,7 +33,7 @@ function openDialog(dialogName, delay, { width, top, left }) {
     dialogStyle.top = top;
     dialogStyle.left = left;
     //mostro il dialog
-    $(dialogName).delay(delay/2).fadeIn(0);
+    $(dialogName).delay(delay/2).fadeIn(500);
 
     //aggiungo il css
     $(dialogName).css(dialogStyle);

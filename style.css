@@ -76,15 +76,19 @@
 
   .fullButton{
     height: 24px; 
-    width: 24px; 
+    width: 24px;  
     margin-right: 3px;
+    margin-bottom: 3px;
+    margin-top: 3px;
     opacity: 0.4;
   }
 
   .closeButton {
     height: 24px; 
-    width: 24px; 
+    width: 24px;  
+    margin-right: 3px;
     margin-bottom: 3px;
+    margin-top: 3px;
     opacity: 0.4;
   }
 
@@ -150,7 +154,6 @@
 
   #chiudiTutto{
     width: 133px;
-    height: ;
     padding: 3px;
     height: 30px;
     position:absolute;
