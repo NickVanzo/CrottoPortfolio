@@ -33,7 +33,7 @@ function openDialog(dialogName, delay, { width, top, left }) {
     dialogStyle.top = top;
     dialogStyle.left = left;
     //mostro il dialog
-    $(dialogName).delay(delay/2).fadeIn(500);
+    $(dialogName).delay(delay / 2).fadeIn(500);
 
     //aggiungo il css
     $(dialogName).css(dialogStyle);
@@ -120,7 +120,7 @@ $(".folder").dblclick(function () {
             openDialog("#dialogBates03", 1500, styleBates[3]);
             openDialog("#dialogBates04", 2000, styleBates[4]);
             openDialog("#dialogBates05", 2500, styleBates[5]);
-        break;
+            break;
 
         case "teodora":
             styleTeodora = {
@@ -207,7 +207,7 @@ $(".fullButton").on("click", function () {
     $(this.parentElement.children[0]).css("display", "block");
     let projectID = "";
     let style;
-    
+
 
     switch (this.id) {
 
@@ -251,7 +251,7 @@ $(".fullButton").on("click", function () {
             style = { width: "75%", top: "1%", left: "14%" };
             break;
 
-        
+
         case "fullBrucke02":
             projectID = "#dialogBrucke02";
             style = { width: "80%", top: "1%", left: "10%" };
@@ -276,7 +276,7 @@ $(".fullButton").on("click", function () {
             projectID = "#dialogBruckeG2";
             style = { width: "52%", top: "1%", left: "25%" };
             break;
-        
+
         case "fullTeodora01":
             projectID = "#dialogTeodoraInterni";
             style = { width: "75%", top: "1%", left: "10%" };
@@ -346,10 +346,10 @@ $(".fullButton").on("click", function () {
             style = { width: "90%", top: "1%", left: "5%" };
             break;
 
-            case "fullPranzo07":
-                projectID = "#dialogPranzo07";
-                style = { width: "52%", top: "1%", left: "22%" };
-                break;    
+        case "fullPranzo07":
+            projectID = "#dialogPranzo07";
+            style = { width: "52%", top: "1%", left: "22%" };
+            break;
 
         default:
             break;
@@ -540,8 +540,21 @@ $("#chiudiTutto").on("click", function () {
 });
 
 function closeWindowsOfProject(projectID) {
-    
+
     $("." + projectID).fadeOut(500);
+
+    if (projectID == "video") {
+        var iframe = document.querySelector('iframe');
+        var video = document.querySelector('video');
+        if (iframe !== null) {
+            var iframeSrc = iframe.src;
+            iframe.src = iframeSrc;
+        }
+        if (video !== null) {
+            video.pause();
+        }
+    }
+
 }
 
 /* SLIDESHOW JS */
@@ -561,71 +574,71 @@ function plusSlides(n, nextSlideIndex) {
 function showSlides(n, no) {
     var i;
     //var x = document.getElementsByClassName(slideId[no]);
-    var x = $("."+slideId[no]);
+    var x = $("." + slideId[no]);
     if (n > x.length) { slideIndex[no] = 1 }
     if (n < 1) { slideIndex[no] = x.length }
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
     x[slideIndex[no] - 1].style.display = "block";
-    
+
 }
 var draggingMouse = false;
 var leftMouseDrag, topMouseDrag;
 $(document)
-  .on("mousedown mouseup", "#cloud_main_page", function (e) {
-    if (e.type == "mousedown") {
-      draggingMouse = true;
-      var offset = $(this).offset();
+    .on("mousedown mouseup", "#cloud_main_page", function (e) {
+        if (e.type == "mousedown") {
+            draggingMouse = true;
+            var offset = $(this).offset();
 
-      leftMouseDrag = e.pageX - offset.left;
-      topMouseDrag = e.pageY - offset.top;
+            leftMouseDrag = e.pageX - offset.left;
+            topMouseDrag = e.pageY - offset.top;
 
-      $("#cloud_main_page .cloud_mouse_selection").css({
-        top: topMouseDrag,
-        left: leftMouseDrag,
-      });
-    } else {
-      draggingMouse = false;
-      $("#cloud_main_page .cloud_mouse_selection").removeAttr("style");
-     
-       
+            $("#cloud_main_page .cloud_mouse_selection").css({
+                top: topMouseDrag,
+                left: leftMouseDrag,
+            });
+        } else {
+            draggingMouse = false;
+            $("#cloud_main_page .cloud_mouse_selection").removeAttr("style");
 
-    }
-  })
-  .on("mousemove", "#cloud_main_page", function (e) {
-    if (draggingMouse) {
-      var offsetDrag = $("#cloud_main_page .cloud_mouse_selection").offset();
 
-      var top = e.pageY - topMouseDrag;
-      var left = e.pageX - leftMouseDrag;
 
-      var width = Math.abs(left);
-      var height = Math.abs(top);
+        }
+    })
+    .on("mousemove", "#cloud_main_page", function (e) {
+        if (draggingMouse) {
+            var offsetDrag = $("#cloud_main_page .cloud_mouse_selection").offset();
 
-      if (top < 0) {
-        $("#cloud_main_page .cloud_mouse_selection").css({
-          top: e.pageY,
-        });
-      } else {
-        $("#cloud_main_page .cloud_mouse_selection").css({
-          top: topMouseDrag,
-        });
-      }
+            var top = e.pageY - topMouseDrag;
+            var left = e.pageX - leftMouseDrag;
 
-      if (left < 0) {
-        $("#cloud_main_page .cloud_mouse_selection").css({
-          left: e.pageX,
-        });
-      } else {
-        $("#cloud_main_page .cloud_mouse_selection").css({
-          left: leftMouseDrag,
-        });
-      }
+            var width = Math.abs(left);
+            var height = Math.abs(top);
 
-      $("#cloud_main_page .cloud_mouse_selection").css({
-        width: width,
-        height: height,
-      });
-    }
-  });
+            if (top < 0) {
+                $("#cloud_main_page .cloud_mouse_selection").css({
+                    top: e.pageY,
+                });
+            } else {
+                $("#cloud_main_page .cloud_mouse_selection").css({
+                    top: topMouseDrag,
+                });
+            }
+
+            if (left < 0) {
+                $("#cloud_main_page .cloud_mouse_selection").css({
+                    left: e.pageX,
+                });
+            } else {
+                $("#cloud_main_page .cloud_mouse_selection").css({
+                    left: leftMouseDrag,
+                });
+            }
+
+            $("#cloud_main_page .cloud_mouse_selection").css({
+                width: width,
+                height: height,
+            });
+        }
+    });
