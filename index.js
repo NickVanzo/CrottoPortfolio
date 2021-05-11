@@ -32,6 +32,7 @@ function openDialog(dialogName, delay, { width, top, left }) {
     dialogStyle.width = width;
     dialogStyle.top = top;
     dialogStyle.left = left;
+
     //mostro il dialog
     $(dialogName).delay(delay / 2).fadeIn(500);
 
@@ -40,20 +41,6 @@ function openDialog(dialogName, delay, { width, top, left }) {
 
     bringToFront(dialogName);
 }
-
-/*
-function openDialog(dialogName, delay, top, left) {
-
-    dialogStyle.top = top;
-    dialogStyle.left = left;
-    //mostro il dialog
-    $(dialogName).delay(delay).fadeIn(500);
-
-    //aggiungo il css
-    $(dialogName).css(dialogStyle);
-
-    bringToFront(dialogName);
-}*/
 
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)
 
@@ -213,7 +200,8 @@ $(".fullButton").on("click", function () {
 
         case "fullVideo":
             projectID = "#dialogVideo";
-            style = { width: "80%", top: "1%", left: "23%" };
+            style = { width: "80%", top: "1%", left: "10%" };
+            $("#dialogVideo iframe").animate({ height: "93vh" }, "slow");
             break;
 
         case "fullAboutMePhoto":
@@ -374,6 +362,7 @@ $(".noFullButton").on("click", function () {
         case "noFullVideo":
             projectID = "#dialogVideo";
             style = styleVideo;
+            $("#dialogVideo iframe").animate({ height: "400px" }, "slow");
             break;
 
         case "noFullAboutMePhoto":
