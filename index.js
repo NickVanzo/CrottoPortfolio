@@ -25,6 +25,9 @@ $(".draggable").draggable();
 $(window).on("load", function () {
     //reset di tutti i dialog
     $(".dialog").css("z-index", 0)
+
+    //btn chiudi tutto deve rimanere avanti a tutti
+    $("#chiudiTutto").css("z-index", 9999);
 });
 
 function openDialog(dialogName, delay, { width, top, left }) {
@@ -34,7 +37,7 @@ function openDialog(dialogName, delay, { width, top, left }) {
     dialogStyle.left = left;
 
     //mostro il dialog
-    $(dialogName).delay(delay / 2).fadeIn(500);
+    $(dialogName).delay(delay / 2).fadeIn(0);
 
     //aggiungo il css
     $(dialogName).css(dialogStyle);
@@ -43,7 +46,6 @@ function openDialog(dialogName, delay, { width, top, left }) {
 }
 
 //prende tutti gli elementi con class "folder" e gestisce l'evento dblclick (doppio click)
-
 $(".folder").dblclick(function () {
     dialogStyle.width = "25%";
 
@@ -184,6 +186,7 @@ $(".folder").dblclick(function () {
     }
 });
 
+
 // quando si clicca sul bottone "fullscreen", questo bottone viene "reso invisibile" tramite display: none;
 // e il bottone "riduci a icona" (identificato da this.parentElement.children[0] -->
 // --> questo perchè nel div padre abbiamo posizionato nell'ordine: NO_FULLSCREEN, fullscreen e close, rispettivamente in posizioni [0],1,2)
@@ -281,8 +284,8 @@ $(".fullButton").on("click", function () {
             break;
 
         case "fullTeodora04":
-            projectID = "#dialogTeodoraText";
-            style = { width: "70%", top: "1%", left: "15%" };
+            projectID = "#dialogTeodoraInterniSlides";
+            style = { width: "75%", top: "1%", left: "12%" };
             break;
 
         case "fullScatto01":
@@ -346,6 +349,7 @@ $(".fullButton").on("click", function () {
     $(projectID).animate(style, "slow");
 
 });
+
 
 // quando si clicca sul bottone "NO fullscreen", questo bottone viene "reso invisibile" tramite display: none;
 // e il bottone "fullscreen" (identificato da this.parentElement.children[1] -->
@@ -486,10 +490,11 @@ $(".noFullButton").on("click", function () {
             break;
 
         case "noFullTeodora04":
-            projectID = "#dialogTeodoraText";
-            style = styleTeodora[3];
+            projectID = "#dialogTeodoraInterniSlides";
+            style = styleTeodora[5];
             break;
 
+        
         default:
             break;
     }
@@ -549,7 +554,7 @@ function closeWindowsOfProject(projectID) {
 /* SLIDESHOW JS */
 //slideIndex ==> contiene l'indice delle immagini da far girare (es. pranzoSlides1 corrisponde alla posizione 0, incrementando l0indice in posizione 0 faremo scorrere le slides di pranzo1)
 var slideIndex = [1, 1, 1, 1, 1];
-var slideId = ["pranzoSlides1", "pranzoSlides2", "bruckeSlides1", "bruckeSlides2", "teodoraSlides1"]
+var slideId = ["pranzoSlides1", "pranzoSlides2", "bruckeSlides1", "bruckeSlides2", "teodoraSlides1"];
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
